@@ -1,0 +1,145 @@
+.shopSearchPage{
+	.inner_page{
+		margin: 0 auto;
+		width: 690rpx;
+		position: relative;
+	}
+	
+	.search_box{
+		height: 70rpx;
+		margin-top:42rpx;
+		margin-bottom: 40rpx;
+		.top{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 70rpx;
+		}
+		.left{
+			position: relative;
+			width:610rpx;
+			height:70rpx;
+			border:1px solid $uni-color-main;
+			border-radius:35rpx;
+			padding-left: 55rpx;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			.input_key{
+				width:460rpx;
+				caret-color: #0478FF;
+			}
+			.place_holder{
+				font-size: 28rpx;
+				color:#CCC;
+			}
+			.cancal_box{
+				position: absolute;
+				right: 25rpx;
+				top: 11rpx;
+				z-index: 2;
+				width: 50rpx;
+				height: 50rpx;
+				text-align: center;
+				.img{
+					width:28rpx;
+					height: 28rpx;
+					margin-top: 11rpx;
+				}
+			}
+		}
+		.right{
+			display: flex;
+			align-items: center;
+			height: 70rpx;
+			font-size: 28rpx;
+			color:$uni-text-color-tip;
+		}
+		.bottom{
+			position: absolute;
+			top:70rpx;
+			width:100%;
+			bottom: 0;
+			background:#fff;
+			z-index: 99;
+		}
+		.list{
+			border-bottom: 1px solid #E5E5E5;
+			height: 80rpx;
+			display: flex;
+			align-items: center;
+			color:$uni-text-color-grey;
+			font-size: 26rpx;
+		}
+	}
+
+	.history{
+		padding-bottom: 25rpx;
+		.top{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.title{
+			color:$uni-text-color-grey;
+			font-size: 32rpx;
+			color:32rpx;
+			font-weight: bold;
+			padding-bottom: 25rpx;
+		}
+		.del{
+			width:100rpx;
+			padding-bottom: 25rpx;
+			text-align: center;
+		}
+		.img{
+			width: 30rpx;
+			height: 28rpx;
+		}
+		.list{
+			background: #F8F8F8;
+			height: 60rpx;
+			border-radius: 30rpx;
+			padding:0 25rpx;
+			font-size: 26rpx;
+			color:$uni-text-color-tip;
+			display: inline-block;
+			line-height: 60rpx;
+			margin-right: 38rpx;
+			margin-bottom: 15rpx;
+		}
+	}
+
+	.host{
+		.title{
+			font-size: 32rpx;
+			color:$uni-text-color-grey;
+			font-weight: bold;
+			padding-bottom: 5rpx;
+		}
+		.host_box{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.list{
+			width:50%;
+			margin-top:32rpx;
+			display: flex;
+			font-size: 28rpx;
+			align-items: center;
+			color:$uni-text-color-grey;
+		}
+		.special{
+			margin-top:10rpx;
+			margin-left: 5rpx;
+		}
+		.img{
+			width:20rpx;
+			height: 38rpx;
+			margin-right: 6rpx;
+		}
+		.list_index{
+			margin-right: 8rpx;
+		}
+	}
+}

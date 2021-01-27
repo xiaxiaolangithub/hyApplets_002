@@ -1,0 +1,234 @@
+	view,text{
+		font-family:PingFang SC;
+	}
+	::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+		color: transparent;
+	}
+	.place_class{
+		color:#ccc;
+		font-weight: normal;
+		font-size: 30rpx;
+	}
+	
+	
+	// 让复选框变成圆形 
+	checkbox {
+		width:34rpx;
+		height: 34rpx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.wx-checkbox-input {
+			border-radius: 50% !important;
+		}
+		.checkbox{
+			border-radius: 0 !important;
+		}
+		.wx-checkbox-input.wx-checkbox-input-checked {
+			color: #fff;
+			background:linear-gradient(0deg,rgba(51,119,255,1),rgba(122,203,255,1));
+			border:1px solid #fff;
+		}
+	}
+	
+	.text_grey{
+		color:$uni-text-color-grey;
+	}
+	
+	
+	// 更改单选框的样式
+	radio {
+		.wx-radio-input{
+			background: transparent;
+		}
+		// 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改）
+		.wx-radio-input.wx-radio-input-checked{
+			background:linear-gradient(0deg,rgba(51,119,255,1),rgba(122,203,255,1));
+			border: none;
+		}
+		// 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改）
+		.wx-radio-input.wx-radio-input-checked::before{
+			color: #ffffff;
+			
+		}
+	}
+	
+	 // 按钮触摸样式
+	.handle_hover{
+		background:#255ecf !important;
+	}
+	
+	// 自定义导航栏
+	.interBar {
+		.uni-navbar--border{
+			border-bottom: none !important;
+		}
+		.uni-navbar__header-btns{
+			padding: 0 !important;
+		}
+		.uni-nav-bar-text{
+			font-size: 36rpx;
+		}
+		.navBar_left{
+			width:170rpx;
+			height:60rpx;
+			border-radius:30rpx;
+			display: flex;
+			align-items: center;
+			box-sizing: border-box;
+		}
+		.navBar_left image{
+			width:39rpx;
+			height: 34rpx;
+		}
+		.navBar_left .page_line{
+			width:2rpx;
+			height: 30rpx;
+			background: rgba(20,30,52,1);
+			margin:0 20rpx;
+		}
+	}
+	
+	// 标题切换
+	.title_change{
+		padding:35rpx 0;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		image{
+			width:30rpx;
+			height: 8rpx;
+			margin-top:17rpx;
+		}
+		.top_title{
+			text-align: center;
+			font-size: 0;
+			display: inline-block;
+			&:first-child{
+				margin-left: -20rpx;
+			}
+		}
+		.title{
+			font-size: 30rpx;
+			color:$uni-text-color-grey;
+			margin-right: 45rpx;
+			width:100%;
+			line-height: 40rpx;
+		}
+		.active_title{
+			font-weight:bold;
+			color:$uni-text-color-grey;
+			font-size: 40rpx;
+		}
+		.img_line{
+			height: 8rpx;
+		}
+	}
+	
+	button::after{
+		border:0 !important;
+	}
+	
+	
+	
+	
+	// 预约选择车辆
+	.page_select_car{
+		background:#F7F7F7;
+		padding:0 30rpx;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 80rpx;
+		.left{
+			display: flex;
+			align-items: center;
+		}
+		.add_tip{
+			color: $uni-color-main;
+			margin:0 10rpx;
+			display: flex;
+			align-items: center;
+		}
+		.icon-xiangyoujiantou{
+			margin-top: 8rpx;
+		}
+		.img{
+			width:40rpx;
+			height: 30rpx;
+		}
+		.name{
+			font-size: 28rpx;
+			color:$uni-text-color-tip;
+			margin: 0 15rpx;
+		}
+		.icon-xiangyoujiantou{
+			color:$uni-text-color-memo;
+			font-size: 24rpx;
+		}
+		.right{
+			color:$uni-text-color-memo;
+			font-size: 26rpx;
+		}
+	}
+	
+	//首页卡片
+	.active_box{
+		position: absolute;
+		left: 24rpx;
+		top: -25px;
+		width: 707rpx;
+		height: 157rpx;
+		background: url('https://img.hangzhouhuiyao.cn/images/hycar/shopHome/active-box-bg.png') center center no-repeat;
+		background-size: 100% 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.active_box_left{
+			width: 450rpx;
+			height: 100%;
+			font-size: 24rpx;
+			color: #7E8596;
+			text-align: center;
+			.title{
+				font-size: 34rpx !important;
+				font-weight: bold;
+				color: #141E34;
+				margin-bottom: 10rpx;
+				margin-top: 30rpx;
+				text-align: center;
+			}
+			.title_text{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.position_icon{
+					width: 20rpx;
+					height: 26rpx;
+					margin-right: 5rpx;
+				}
+			}
+			
+		}
+		.active_box_right{
+			width: 240rpx;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			.phone{
+				width: 45rpx;
+				height: 67rpx;
+				margin-top: 13rpx;
+			}
+			.title_text{
+				width: 100%;
+				height: 62rpx;
+				font-size: 26rpx;
+				font-weight: bold;
+				text-align: center;
+			}
+		}
+	}

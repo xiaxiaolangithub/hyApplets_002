@@ -1,0 +1,77 @@
+.goodListPage{
+	.box{
+		padding:40rpx 30rpx;
+		box-sizing: border-box;
+	}
+	.list{
+		margin-bottom: 40rpx;
+		height: 210rpx;
+		display: flex;
+		justify-content: space-between;
+	}
+	.img{
+		width: 210rpx;
+		height: auto !important;
+		border-radius: 12rpx;
+		margin-right: 30rpx;
+	}
+	.info{
+		width:448rpx;
+		padding-top:10rpx;
+		height: 210rpx;
+		box-sizing: border-box;
+	}
+	.name{
+		font-size:30rpx;
+		font-weight:540;
+		color:#141F34;
+		line-height:44rpx;
+		height: 95rpx;
+		text-overflow: -o-ellipsis-lastline;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		-webkit-box-orient: vertical;
+	}
+	.other{
+		display: flex;
+		justify-content: space-between;
+		padding-top:20rpx;
+		align-items: flex-end;
+		&.special{
+			align-items: center;
+			padding-top:40rpx;
+		}
+		.price{
+			.now{
+				color:$uni-text-color-price;
+				font-size: 34rpx;
+				font-weight: bold;
+			}
+			.org{
+				color:$uni-text-color-memo;
+				font-size: 32rpx;
+				text-decoration: line-through;
+			}
+		}
+		.handle{
+			.shop{
+				width: 180rpx;
+				height: 66rpx;
+				background: #3377FF;
+				border-radius: 12rpx;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color:#FFFFFF;
+				font-size: 28rpx;
+				&.end{
+					background: #CDD5DB;
+				}
+			}
+			
+		}
+	}
+}

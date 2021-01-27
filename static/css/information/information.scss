@@ -1,0 +1,104 @@
+.homeContainer{
+	img{
+		max-width: 690rpx !important;
+	}
+	// 资讯信息
+	.tabs {
+		.scroll-h {
+			width: 750rpx;
+			height: 80rpx;
+			position: fixed;
+			top:0;
+			background: #fff;
+			flex-direction: row;
+			/* #ifndef APP-PLUS */
+			white-space: nowrap;
+			/* #endif */
+		}
+		.uni-tab-item {
+		    /* #ifndef APP-PLUS */
+		    display: inline-block;
+		    /* #endif */
+		    flex-wrap: nowrap;
+		    padding-left: 34rpx;
+		    padding-right: 24rpx;
+		}
+		.tab-title{
+			font-size: 30rpx;
+		}
+		.tab-title-active{
+			font-weight: bold;
+			color:$uni-text-color-grey;
+			font-size: 40rpx;
+		}
+		.active-line{
+			background: linear-gradient(0deg, #3975E9, #69ACFF);
+			width: 30rpx;
+			height: 8rpx;
+			display: center;
+			margin-left: 44rpx;
+			margin-top: 8rpx;
+			border-radius: 3rpx;
+		}
+		.news_container{
+			width:100%;
+			padding:90rpx 30rpx 150rpx;
+			box-sizing: border-box;
+		}
+		.new_list{
+			width:690rpx;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			border-bottom:1px solid #E4E4E6;
+			padding: 30rpx 0;
+			padding-top:10rpx;
+			box-sizing: border-box;
+		}
+		.news_left{
+			width:65%;
+			.news_title{
+				color:$uni-text-color-grey;
+				font-size: 34rpx;
+				margin: 18rpx 0 ;
+				text-overflow: -o-ellipsis-lastline;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				line-clamp: 1;
+				-webkit-box-orient: vertical;
+			}
+			.news_info{
+				color:$uni-text-color-memo;
+				font-size: 28rpx;
+				line-height:42rpx;
+				text-overflow: -o-ellipsis-lastline;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				line-clamp: 2;
+				-webkit-box-orient: vertical;
+				 
+			}
+		}
+		.news_img{
+			width:232rpx;
+			height: 144rpx !important;
+			margin-top: 24rpx;
+			display: flex;
+			justify-content: center;
+			border-radius: 8rpx;
+			overflow: hidden;
+			.img{
+				width:232rpx;
+				height: 100% !important;
+			}
+		}
+	}	
+}
+	
+	
+	
+	

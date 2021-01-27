@@ -1,0 +1,197 @@
+.editDossierPage{
+	
+	.drive{
+		background: #fff;
+		padding-bottom: 20rpx;
+		.inner{
+			width:524rpx;
+			height: 319rpx;
+			margin: 0 auto;
+			background: url("https://img.hangzhouhuiyao.cn/images/hycar/carDossier/Driving_back.png") center center no-repeat;
+			background-size: 100% 100%;
+			position: relative;
+		}
+		.camera{
+			width:95rpx;
+			height: 95rpx;
+			background: url("https://img.hangzhouhuiyao.cn/images/hycar/carDossier/camera.png") center center no-repeat;
+			background-size: 100% 100%;
+			position: relative;
+			top: 107rpx;
+			left:215rpx;
+		}
+		.upload{
+			position: absolute;
+			bottom: 10rpx;
+			left: 137rpx;
+			color:#fff;
+			font-size: 28rpx;
+			
+		}
+	}
+	// 车辆信息
+	.info_section{
+		padding-bottom:40rpx;
+		.info_inner{
+			width:690rpx;
+			margin: 30rpx auto 0;
+			background: #fff;
+			border-radius: 20rpx;
+			padding-bottom: 10rpx;
+		}
+	}
+	.info_title{
+		padding:48rpx 0 12rpx 30rpx;
+		display: flex;
+		align-items: center;
+		font-size: 40rpx;
+		font-weight: bold;
+		color:$uni-color-bold;
+		.line{
+			width: 8rpx;
+			height: 36rpx;
+			background: linear-gradient(0deg, #1D76F1, #51AEFF);
+			border-radius: 3rpx;
+			margin-right: 20rpx;
+		}
+	}
+	
+	// 基本信息
+	.basic_info{
+		.list{
+			border-bottom: 1px solid rgba(229,229,229,1);
+			display: flex;
+			align-items: center;
+			height: 100rpx;
+			justify-content: space-between;
+			padding-left:50rpx;
+			position: relative;
+			&:last-child{
+				border-bottom: 0;
+			}
+		}
+		.licensed_list{
+			position: relative;
+		}
+		.licensed{
+			position: absolute;
+			right: 30rpx;
+			display: flex;
+			color:$uni-text-color-grey;
+			height: 100%;
+			align-items: center;
+			.checkbox{
+				margin-right: 5px;
+			}
+		}
+		.licensed_label{
+			display: flex;
+			align-items: center;
+		}
+		.require{
+			position: absolute;
+			left: 20rpx;
+			width:20rpx;
+			height: 20rpx;
+
+		}
+		.plate_no{
+			color:#7E8696;
+			font-weight: bold;
+		}
+		.special_num{
+			background: url('https://img.hangzhouhuiyao.cn/images/hycar/editDossier/native.png') center center no-repeat;
+			background-size: 100% 100%;
+			width:50rpx;
+			height: 50rpx;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 15rpx;
+			color:#3478FF;
+		}
+		.title{
+			color:rgba(20,30,52,1);
+			font-size: 30rpx;
+			width:25%;
+			font-weight: bold;
+		}
+		.displace_picker,.value{
+			width:75%;
+			padding-left: 25rpx;
+		}
+		.date_select{
+			position: relative;
+		}
+		.date_text{
+			position: absolute;
+			left: 28rpx;
+			top:0;
+			right: 0;
+			bottom: 0;
+			padding-top:30rpx;
+		}
+		.date_icon{
+			position: absolute;
+			right: 30rpx;
+			top:0;
+			right: 0;
+			bottom: 0;
+			padding-top:30rpx;
+		}
+		.displace_box{
+			width:100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.basic_text{
+			font-size: 30rpx;
+			color:#CCCCCC;
+		}
+		.special{
+			margin-left: 2rpx;
+		}
+		.icon-xiangyoujiantou{
+			color:#7E8696;
+			margin-right: 30rpx;
+		}
+		.value{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 100%;
+		}
+		.car_input,.plate{
+			height: 100%;
+			width:72%;
+			line-height: 100%;
+			display: flex;
+			align-items: center;
+		}
+		.fill{
+			color: #7E8696;
+			font-size: 30rpx;
+			font-weight: bold;
+		}
+		.kilometre{
+			padding-right: 30rpx;
+			color:#7E8696;
+			font-size: 30rpx;
+		}
+	}
+	
+	// 提交信息
+	.submit{
+		width:690rpx;
+		height:80rpx;
+		margin: 80rpx  auto 0;
+		background:#3478FF;
+		border-radius:12rpx;
+		color: #fff;
+		font-size: 36rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

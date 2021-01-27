@@ -1,0 +1,90 @@
+.insurance_index{
+	.box{
+		box-sizing: border-box;
+		.insurance_top{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #FFFFFF;
+			margin-bottom: 30rpx;
+			position: fixed;
+			width: 100%;
+			top: 0;
+			view{
+				display: flex;
+				align-items: center;
+				width: 44%;
+				height: 230rpx;
+				color: #FFFFFF;
+				padding-left: 35rpx;
+				box-sizing: border-box;
+			}
+			view:first-child{
+				background: url('https://img.hangzhouhuiyao.cn/images/hycar/goods/insurance-type1.png') center center no-repeat;
+				background-size: 100%;
+				margin-left: 30rpx;
+			}
+			view:last-child{
+				background: url('https://img.hangzhouhuiyao.cn/images/hycar/goods/insurance-type2.png') center center no-repeat;
+				background-size: 100%;
+				margin-right: 30rpx;
+			}
+		}
+		.insurance_list {
+			padding: 0 30rpx;
+			margin-top: 260rpx;
+			.insurance_box {
+				border-radius: 15rpx;
+				padding: 30rpx;
+				margin-bottom: 30rpx;
+				background-color: #FFFFFF;
+				.list_title {
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 30rpx;
+					view {
+						display: flex;
+						align-items: center;
+						.act {
+							width: 8rpx;
+							height: 30rpx;
+							background: linear-gradient(0deg, #3975E9, #69ACFF);
+							border-radius: 5rpx;
+							margin-right: 15rpx;
+						}
+					} 
+					view:last-child {
+						color: #007AFF;
+					}
+				}
+				.list_text {
+					view {
+						display: flex;
+						align-items: center;
+						margin-bottom: 20rpx;
+						text:first-child {
+							margin-right: 40rpx;
+						}
+						text:last-child {
+							color: #7E8596;
+						}
+					}
+					view: last-child{
+						margin-bottom:  0!important;
+					}
+				}
+				.list_button {
+					display: flex;
+					justify-content: flex-end;
+					view {
+						color: #007AFF;
+						border: 1px #007AFF solid;
+						padding: 10rpx;
+						border-radius: 15rpx;
+					}
+				}
+			}
+		}
+	}
+	
+}

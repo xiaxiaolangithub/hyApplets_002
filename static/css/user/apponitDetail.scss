@@ -1,0 +1,265 @@
+.apponitDetailPage{
+	.page_inner{
+		width:690rpx;
+		margin: 0 auto;
+		padding:30rpx 0;
+		padding-bottom: 200rpx;
+	}
+	
+	.basic{
+		background:#fff;
+		height:100rpx;
+		border-radius:20rpx;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 26rpx;
+		padding:0 30rpx;
+		box-sizing: border-box;
+		margin-bottom: 30rpx;
+		.date{
+			color:rgba(20,30,52,1);
+			font-size: 26rpx;
+		}
+		.status{
+			color:rgba(236,97,42,1);
+		}
+	}
+	
+	
+	// 门店地址
+	.address{
+		width: 100%;
+		height: 270rpx;
+		background: url('https://img.hangzhouhuiyao.cn/images/hycar/orderDetail/4s_back.png') center center no-repeat;
+		background-size: 100% 100%;
+		padding:30rpx 30rpx 0 30rpx;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		.left{
+		}
+		.goStore{
+			color:rgba(20,30,52,1);
+			font-size: 30rpx;
+		}
+		.store_name{
+			color:rgba(20,30,52,1);
+			font-size: 36rpx;
+			margin-top:35rpx;
+			margin-bottom: 18rpx;
+			font-weight: bold;
+		}
+		.store_address{
+			color:rgba(20,30,52,1);
+			font-size: 30rpx;
+			font-weight: bold;
+		}
+		.right{
+			text-align: center;
+			padding-top:80rpx;
+		}
+		.address_icon{
+			image{
+				width: 50rpx;
+				height: 45rpx;
+			}
+		}
+		.go_to{
+			color:rgba(20,30,52,1);
+			font-size: 26rpx;
+		}
+	}
+
+
+	.order_box{
+		width:690rpx;
+		margin:30rpx 0;
+		background:#fff;
+		border-radius:20rpx;
+		padding:30rpx ;
+		box-sizing: border-box;
+		.top{
+			color:$uni-text-color-memo;
+			padding-bottom: 38rpx;
+		}
+		.goods{
+			display: flex;
+			.left{
+				margin-right: 20rpx;
+				image{
+					width:180rpx;
+					height: 180rpx;
+				}
+			}
+			.right{
+				padding-top:8rpx;
+			}
+			.name{
+				font-size: 32rpx;
+				color:$uni-text-color-grey;
+				margin-bottom: 35rpx;
+			}
+			.price{
+				color:$uni-text-color-memo;
+				font-size: 26rpx;
+				.icon{
+					color: $uni-text-color-grey;
+					font-size: 28rpx;
+					margin-right: 8rpx;
+				}
+				.yuan{
+					color: $uni-text-color-grey;
+					font-size: 34rpx;
+					margin-right: 8rpx;
+				}
+			}
+		}
+		.order_list{
+			padding-bottom: 20rpx;
+			.item{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding-bottom: 15rpx;
+			}
+			.text{
+				font-size: 28rpx;
+				color:$uni-text-color-memo;
+			}
+			text{
+				color:$uni-text-color-grey;
+				font-size: 30rpx;
+				.icon{
+					font-size: 28rpx;
+					margin-right: 8rpx;
+				}
+			}
+			.sum_price{
+				color:$uni-text-color-price;
+				.icon{
+					color:$uni-text-color-price;
+				}
+			}
+		}
+	}
+	
+	.other_info{
+		background:#fff;
+		border-radius:20rpx;
+		padding:25rpx 0 35rpx 30rpx;
+		box-sizing: border-box;
+		.top{
+			color:$uni-text-color-grey;
+			font-size: 32rpx;
+			margin-bottom: 38rpx;
+		}
+		.other_list{
+			
+		}
+		.item{
+			display: flex;
+			align-items: center;
+			padding-bottom: 20rpx;
+		}
+		.title{
+			color:$uni-text-color-tip;
+			font-size: 28rpx;
+			width:32%;
+		}
+		text{
+			color: $uni-text-color-grey;
+			font-size: 28rpx;
+		}
+	}
+	
+	.page_footer{
+		height:100rpx;
+		background:#fff;
+		border:1px solid rgba(245,245,245,1);
+		padding:0 30rpx;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.left{
+			display: flex;
+			align-items: center;
+			image{
+				width:30rpx;
+				height: 30rpx;
+				margin-right: 10rpx;
+			}
+			text{
+				font-size: 24rpx;
+				color:$uni-text-color-grey;
+			}
+			.kefu{
+				display: flex;
+				align-items: center;
+				&:first-child{
+					margin-right: 40rpx;
+				}
+			}
+			.contact{
+				background:#fff;
+				width:100rpx;
+				height: 100%;
+				font-size: 24rpx;
+				color:$uni-text-color-grey;
+				padding: 0 !important;
+				&::after{
+					border: 0 !important;
+				}
+			}
+		}
+		.right{
+			display: flex;
+			align-items: center;
+			.cancel{
+				width:160rpx;
+				height:56rpx;
+				border:1px solid $uni-color-main;
+				border-radius:12rpx;
+				color:$uni-color-main;
+				font-size: 24rpx;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-right: 20rpx;
+			}
+			.edit{
+				width:160rpx;
+				height:56rpx;
+				background:$uni-color-main;
+				border-radius:12rpx;
+				color:#fff;
+				font-size: 24rpx;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+	
+	.total_num{
+		color:rgba(151,156,167,1);
+		font-size: 28rpx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.iconfont{
+			color:rgba(151,156,167,1);
+			margin-left: 8rpx;
+		}
+	}
+	.detail{
+		margin: 10rpx 0;
+	}
+}
+

@@ -1,0 +1,55 @@
+.cardBagPage{
+	
+	.card_inner{
+	}
+	.hearder {
+		top:0rpx;
+		height: 90rpx;
+		padding-top:10rpx;
+		background: #ffffff;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		font-size: 24rpx;
+		position: fixed;
+		z-index: 2;
+		padding-left: 40rpx;
+		padding-bottom: 15rpx;
+		box-sizing: border-box;
+		.hearder_item{
+			padding-right: 60rpx;
+		}
+		.hearder_text {
+			padding-bottom: 5rpx;
+			font-size: 30rpx;
+		}
+		.active_index {
+			font-weight: bold;
+			font-size: 40rpx;
+		}
+		.header_line{
+			display: flex;
+			justify-content: center;
+			padding-top: 5rpx;
+			image{
+				width:34rpx;
+				height: 10rpx;
+			}
+		}
+	}
+
+	.card_container{
+		width:690rpx;
+		margin:120rpx auto 450rpx;
+	}
+
+	
+	.footer_img{
+		width:238rpx;
+		height: 238rpx;
+		position: fixed;
+		bottom: 110rpx;
+		right: 0;
+	}
+
+}

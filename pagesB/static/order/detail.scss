@@ -1,0 +1,261 @@
+.orderDetailPage{
+	.top_box{
+		height: 388rpx;
+		&.noPay{
+			background: url("https://img.hangzhouhuiyao.cn/images/hycar/orderDetail/noPay.png") center center no-repeat;
+			background-size: 100% 100%;
+		}
+		&.payed{
+			background: url("https://img.hangzhouhuiyao.cn/images/hycar/orderDetail/payed.png") center center no-repeat;
+			background-size: 100% 100%;
+		}
+		&.hasPay{
+			background: url("https://img.hangzhouhuiyao.cn/images/hycar/orderDetail/hasPay.png") center center no-repeat;
+			background-size: 100% 100%;
+		}
+		&.goodsPay{
+			background: url("https://img.hangzhouhuiyao.cn/images/hycar/orderDetail/goodsPay.png") center center no-repeat;
+			background-size: 100% 100%;
+		}
+		&.cancelled{
+			background: url("https://img.hangzhouhuiyao.cn/images/hycar/orderDetail/cancelled.png") center center no-repeat;
+			background-size: 100% 100%;
+		}
+		.tip{
+			display: flex;
+			align-items: center;
+			// padding:70rpx 0 0 50rpx;
+			position: absolute;
+			left:50rpx;
+			top: 212rpx;
+			color:#fff;
+			.icon{
+				margin-right: 26rpx;
+				width: 38rpx;
+				height: 38rpx;
+			}
+			.right{
+				text-align: center;
+				font-size: 34rpx;
+			}
+			&.cancel_tip{
+				position: absolute;
+				left:90rpx;
+				top:245rpx;
+				.right{
+					display: flex;
+					align-items: center;
+				}
+			}
+			
+		}
+		.hasPay_tip{
+			position: absolute;
+			left:50rpx;
+			top: 210rpx;
+			color:#fff;
+			font-size: 34rpx;
+			.icon{
+				margin-right: 26rpx;
+				width: 38rpx;
+				height: 38rpx;
+			}
+			.address_icon{
+				width:20rpx;
+				height: 26rpx;
+				margin-right: 17rpx;
+			}
+			.address{
+				font-size: 26rpx;
+				padding-top:20rpx;
+				width:410rpx;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				line-clamp: 1;
+				-webkit-box-orient: vertical;
+			}
+			.top{
+				display: flex;
+				align-items: center;
+				padding-left: 10rpx;
+			}
+		}
+		
+		.noPay_tip{
+			position: absolute;
+			top:240rpx;
+			left:80rpx;
+			color:#fff;
+			.right{
+				font-size: 34rpx;
+				display: flex;
+				align-items: center;
+				margin-bottom: 5rpx;
+			}
+			.icon{
+				width: 35rpx;
+				height: 35rpx;
+				margin-right: 25rpx;
+			}
+			.surplus{
+				font-size: 26rpx;
+			}
+		}
+		.noPay_tip_order{
+			position: absolute;
+			top: 222rpx;
+			left:80rpx;
+			color:#fff;
+		}
+	}
+
+	.goods{
+		margin: 50rpx 30rpx 0;
+		.info{
+			display: flex;
+			justify-content: space-between;
+			.img{
+				width: 180rpx;
+				height: 180rpx;
+				border-radius: 14rpx;
+			}
+			.right{
+				width:478rpx;
+			}
+			.name{
+				height: 65rpx;
+				font-size: 28rpx;
+				color:$uni-text-color-grey;
+				line-height: 36rpx;
+				margin-top:5rpx;
+			}
+			.middle{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-size: 26rpx;
+				color: $uni-text-color-memo;
+				margin-top: 20rpx;
+			}
+			.attr{
+				display: flex;
+				.text{
+					margin-right: 35rpx;
+				}
+			}
+			.bottom{
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				font-size: 32rpx;
+				color:$uni-text-color-grey;
+				margin-top:20rpx;
+				.yuan{
+					font-size: 26rpx;
+					margin-right: 5rpx;
+				}
+			}
+		}
+		.price{
+			.total{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 1px solid #E5E5E5;
+				font-size: 32rpx;
+				color:$uni-text-color-grey;
+				height: 90rpx;
+			}
+			.yuan{
+				font-size: 26rpx;
+				margin-right: 5rpx;
+			}
+			.pay{
+				border-bottom: 0;
+				color:$uni-text-color-price;
+				font-size: 38rpx;
+			}
+			.price_num{
+				display: flex;
+				align-items: center;
+			}
+			.text{
+				color:$uni-text-color-memo;
+				font-size: 28rpx;
+			}
+		}
+		
+	}
+
+
+	.place{
+		width: 750rpx;
+		height: 20rpx;
+		background: #F7F7F7;
+	}
+	
+	.order{
+		margin:15rpx 30rpx 0;
+		.list{
+			color:$uni-text-color-tip;
+			font-size: 28rpx;
+			padding-top:15rpx;
+		}
+		.bottom{
+			display: flex;
+			margin-top:50rpx;
+		}
+		.refund{
+			width: 170rpx;
+			height: 56rpx;
+			border: 1px solid #979CA7;
+			border-radius: 10rpx;
+			color:$uni-text-color-memo;
+			font-size: 28rpx;
+			margin-right: 55rpx;
+			line-height: 56rpx;
+			text-align: center;
+			&.hover{
+				background: #f0f2f5;
+			}
+		}
+		.kefu{
+			width: 170rpx;
+			height: 56rpx;
+			border: 1px solid #3377FF;
+			border-radius: 10rpx;
+			font-size: 28rpx;
+			color:$uni-color-main;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			&.hover{
+				background: #75C5FF;
+				color:#fff;
+				border: 1px solid transparent;
+			}
+			.kefu_icon{
+				width:41rpx;
+				height: 34rpx;
+				margin-right: 10rpx;
+			}
+		}
+	}
+
+	.goPay{
+		width: 690rpx;
+		height: 80rpx;
+		background: $uni-color-main;
+		border-radius: 12rpx;
+		color:#fff;
+		line-height: 80rpx;
+		text-align: center;
+		margin: 140rpx auto 0;
+		&.waitHandle{
+			margin: 65rpx auto 0;
+		}
+	}
+}

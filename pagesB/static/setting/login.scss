@@ -1,0 +1,64 @@
+.loginPage{
+	.arredit_inner{
+		text-align: center;
+	}
+	.img{
+		width: 150rpx;
+		height: 150rpx;
+		margin:60rpx auto 40rpx;
+		border-radius: 10rpx;
+
+	}
+	.top{
+		text-align: center;
+		color:#333;
+		font-size: 26rpx;
+		margin-bottom: 200rpx;
+	}
+	.user{
+		width:690rpx;
+		margin: 0 auto;
+		button{
+			background:$uni-color-main;
+			color:#fff;
+		}
+	}
+	.handle{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top:30rpx;
+		.btn{
+			width:150rpx;
+			height: 80rpx;
+			font-size: 32rpx;
+			color:#fff;
+			border:none !important;
+			outline: none !important;
+		}
+		.cancel{
+			background:#CED6DC;
+		}
+		.weixin{
+			background:$uni-color-main;
+		}
+		.btn::after{
+			border: none !important;
+		}
+	}
+}
+
+.login_modal{
+	.title{
+		text-align: center;
+		padding:15rpx 0;
+		color:#141F34;
+		font-size: 34rpx;
+		font-weight: bold;
+	}
+	.content{
+		text-align: center;
+		padding:20rpx 0;
+		color: #141F34;
+	}
+}

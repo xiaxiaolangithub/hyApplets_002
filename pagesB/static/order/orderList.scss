@@ -1,0 +1,128 @@
+.orderListPage{
+	.header {
+		top:0rpx;
+		height: 90rpx;
+		padding-top:20rpx;
+		background: #ffffff;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 24rpx;
+		position: fixed;
+		z-index: 2;
+		padding-left: 40rpx;
+		padding-bottom: 15rpx;
+		box-sizing: border-box;
+		.item{
+			padding-right: 60rpx;
+		}
+		.text {
+			font-size: 28rpx;
+		}
+		.active {
+			color:$uni-color-main;
+		}
+		.line{
+			display: flex;
+			justify-content: center;
+			margin:26rpx 0 15rpx 0;
+			image{
+				width:34rpx;
+				height: 10rpx;
+			}
+		}
+	}
+	
+	.inner{
+		padding: 120rpx 30rpx 70rpx;
+		.list{
+			background: #fff;
+			border-radius: 20rpx;
+			margin-bottom: 30rpx;
+			padding: 30rpx 30rpx 38rpx;
+			box-sizing: border-box;
+		}
+		.top{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			color:$uni-text-color-memo;
+			font-size: 26rpx;
+			margin-bottom: 38rpx;
+			.status{
+				color:$uni-text-color-price;
+			}
+		}
+		.goods{
+			display: flex;
+			justify-content: space-between;
+			.left{
+				width:180rpx;
+				height: 180rpx;
+				border-radius: 12rpx;
+			}
+			.right{
+				width:430rpx;
+			}
+			.name{
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				line-clamp: 2;
+				-webkit-box-orient: vertical;
+				font-size: 30rpx;
+				color:$uni-text-color-grey;
+				height: 78rpx;
+				margin: 15rpx 0 15rpx;
+			}
+			.other{
+				display: flex;
+				justify-content: space-between;
+				color:$uni-text-color-grey;
+				font-size: 28rpx;
+				height: 72rpx;
+				align-items: center;
+				.spec_num{
+					color:$uni-text-color-memo;
+					font-size: 25rpx;
+				}
+			}
+		}
+		.handle{
+			display: flex;
+			justify-content: flex-end;
+			margin-top:28rpx;
+			.pay{
+				width: 170rpx;
+				height: 60rpx;
+				background: $uni-color-main;
+				border-radius: 12rpx;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color:#fff;
+				font-size: 28rpx;
+				&.del{
+					border:1px solid $uni-color-main;
+					background: transparent;
+					color:$uni-color-main;
+					&.hover{
+						background:$uni-color-main;
+						color:#fff;
+					}
+				}
+			}
+		}
+	}
+	
+	.nodata_coupon{
+		padding-top:150rpx;
+		position: absolute;
+		top:0;
+		bottom: 0;
+		background: #fff;
+		width:100%;
+	}
+}

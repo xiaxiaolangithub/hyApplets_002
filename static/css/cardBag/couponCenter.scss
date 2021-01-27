@@ -1,0 +1,48 @@
+.couponCenterPage{
+	padding-bottom: env(safe-area-inset-bottom);
+	.page_inner{
+		width:690rpx;
+		margin:0 auto;
+	}
+	.coupon_box{
+		margin-top:140rpx;
+	}
+	.adver{
+		background: #fff;
+		padding-top:20rpx;
+		padding-bottom: 30rpx;
+		.top_inner{
+			width:690rpx;
+			margin:0 auto;
+		}
+		.img{
+			width:690rpx;
+			height:300rpx;
+		}
+	}
+	
+	
+	/* sticky 容器 start */
+	
+		.sticky_item {
+			padding-left: 30rpx !important;
+			background:#fff;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			background:#F7F7F7;
+			position: -webkit-sticky;
+			// position: sticky;
+			position: fixed;
+			width: 100%;
+			top:0;
+			text-align: center;
+			color: #fff;
+			z-index: 1;
+		}
+		
+	
+	
+	
+}

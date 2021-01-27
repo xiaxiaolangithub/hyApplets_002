@@ -1,0 +1,121 @@
+.carDossierPage{
+	padding:25rpx 0 50rpx ;
+	 .inner{
+		 width:690rpx;
+		 margin: 0 auto;
+	 }
+	 .add_section{
+		 width:100%;
+		 position: relative;
+		 height: 125rpx;
+		 display: flex;
+		 justify-content: center;
+		 align-items: center;
+		 .add_back{
+			 position: absolute;
+			 top:0;
+			 right: 0;
+			 left: 0;
+			 bottom: 0;
+			 width:100%;
+			 z-index: -1;
+		 }
+		 .add_handle{
+			 display: flex;
+			 justify-content: center;
+			 align-items: center;
+			 color:$uni-color-main;
+			 font-size:34rpx;
+			 image{
+				 width:25rpx;
+				 height: 25rpx;
+				  margin-right: 15rpx;
+			 }
+		 }
+	 }
+	 
+	 .car_list{
+		 padding-top:25rpx;
+		 .list{
+			 margin-bottom: 40rpx;
+			 // height: 300rpx;
+			 padding-top:30rpx;
+			 box-sizing: border-box;
+			 background: url('https://img.hangzhouhuiyao.cn/images/hycar/carDossier/car_back.png') center center no-repeat;
+			 background-size: 100% 100%;
+		 }
+		 .list_top{
+			display: flex;
+			justify-content: space-between;
+			padding-left: 40rpx;
+			box-sizing: border-box;
+			margin-bottom: 48rpx;
+		 }
+		.car_img{
+			width:120rpx;
+			height: 60rpx;
+			border-radius: 10rpx;
+			margin-top:18rpx;
+		 }
+		 .middle{
+			 width:75%;
+			 padding-top:20rpx;
+			 .name_box{
+				 color:#1B2433;
+				 font-size: 34rpx;
+				 font-weight: bold;
+			 }
+			 text{
+				 color:#131C29;
+				 font-size: 28rpx;
+			 }
+		 }
+		 .plate_no{
+		 	font-size: 28rpx;
+		 }
+		 .right{
+			padding-right: 50rpx;
+			 image{
+				 width:55rpx;
+				 height: 55rpx;
+			 }
+		 }
+		.list_bottom{
+			width:100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			height: 90rpx;
+			border-top: 1px solid #E5E5E5;;
+			box-sizing: border-box;
+		}
+		.set_default{
+			width:50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color:#fff;
+			font-size: 30rpx;
+			height: 100%;
+		}
+		.delBtn{
+			border: 1rpx solid #E5E5E5;
+			border-top: 0;
+			border-bottom: 0;
+			height: 70% !important;
+		}
+		.has_default{
+			color:#fff;
+			opacity:0.5;
+		}
+		.del{
+			width:50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color:#fff;
+			font-size: 30rpx;
+			height: 100%;
+		}
+	 }
+}

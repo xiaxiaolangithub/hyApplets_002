@@ -1,0 +1,484 @@
+{
+	"mp-weixin": {
+		"usingComponents": true
+	},
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/home", // 首页
+			"style": {
+				"navigationBarTitleText": "",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#fff",
+				"backgroundColorTop": "#21242d",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/shop/shop", // 商城首页
+			"style": {
+				"navigationStyle": "custom",
+				"onReachBottomDistance": 350,
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none",
+					"pullToRefresh": {
+						"style": "circle",
+						"offset": "70px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/information/information", // 资讯页面	
+			"style": {
+				"navigationBarTitleText": "汽车资讯",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#fff",
+				"backgroundColorTop": "#21242d",
+				"navigationBarTextStyle": "black",
+				"onReachBottomDistance": 350,
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/information/web-view", // 商城 -> 新车列表 -> 新车详情
+			"style": {
+				"navigationBarTitleText": "",
+				"h5": {
+					"titleNView": false
+				},
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/user/user", // 个人中心
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/newCar/carList", // 商城 -> 新车列表
+			"style": {
+				"navigationBarTitleText": "车辆展厅",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#fff",
+				"backgroundColorTop": "#21242d",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		}
+	],
+	"subPackages": [
+		{
+		"root": "pagesA",
+		"pages": [
+			{
+				"path": "pages/reserve/selectMaintain", // 商城 -> 保养 -> 选择保养项目
+				"style": {
+					"navigationBarTitleText": "选择保养项目",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			},
+			{
+				"path": "pages/reserve/confirmMaintain", // 商城 -> 保养 -> 选择保养项目 -> 提交预约保养
+				"style": {
+					"navigationBarTitleText": "",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			},
+			{
+				"path": "pages/newCar/carDetail", // 商城 -> 新车列表 -> 新车详情
+				"style": {
+					"navigationBarTitleText": "汽车详情",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			},
+			{
+				"path": "pages/newCar/carModel", // 商城 -> 新车列表 -> 新车详情
+				"style": {
+					"navigationBarTitleText": "车型展示",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			},
+			{
+				"path": "pages/information/infoDetail", // 资讯 -> 资讯详情
+				"style": {
+					"navigationBarTitleText": "",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			},
+			{
+				"path": "pages/goods/category", // 商城 -> 商品分类
+				"style": {
+					"navigationStyle": "custom",
+					"app-plus": {
+						"titleNView": false,
+						"bounce": "none",
+						"pullToRefresh": {
+							"style": "circle",
+							"offset": "70px"
+						}
+					}
+				}
+			},
+			{
+				"path": "pages/goods/goodList", // 商城 -> 商品列表
+				"style": {
+					"navigationBarTitleText": "",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "pages/goods/goodDetail", // 商城 -> 商品详情
+				"style": {
+					"navigationBarTitleText": "商品详情",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			},
+			{
+				"path": "pages/goods/shopSearch", // 商城 -> 商城搜索页面
+				"style": {
+					"navigationBarTitleText": "搜索",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			},
+			{
+				"path": "pages/newCar/video", // 商城 -> 新车列表 -> 新车详情
+				"style": {
+					"navigationBarTitleText": "",
+					"h5": {
+						"titleNView": false
+					},
+					"app-plus": {
+						"titleNView": false,
+						"bounce": "none"
+					}
+				}
+			},
+			{
+				"path": "pages/newCar/askPrice", // 商城 -> 新车列表 -> 询底价
+				"style": {
+					"navigationBarTitleText": "询底价",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			},
+			{
+				"path": "pages/cardBag/cardBag", // 卡包
+				"style": {
+					"navigationBarTitleText": "优惠卡券",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black",
+					"onReachBottomDistance": 350,
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "pages/cardBag/couponDetails", // 卡包 -> 卡包详情
+				"style": {
+					"navigationBarTitleText": "优惠券详情",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black",
+					"onReachBottomDistance": 350
+				}
+			},
+			{
+				"path": "pages/cardBag/couponCenter", // 卡包 -> 领券中心
+				"style": {
+					"navigationBarTitleText": "领券中心",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "pages/shop/insurance/index", //保险
+				"style": {
+					"navigationBarTitleText": "保值服务",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			},
+			{
+				"path": "pages/shop/insurance/detail", //保险详情
+				"style": {
+					"navigationBarTitleText": "",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			}, {
+				"path": "pages/shop/insurance/form", //保险信息
+				"style": {
+					"navigationBarTitleText": "投保信息",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			}, {
+				"path": "pages/shop/insurance/order", //保单信息,
+				"style": {
+					"navigationBarTitleText": "保单信息",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			},
+			{
+				"path": "pages/shop/insurance/save", //保单结算
+				"style": {
+					"navigationBarTitleText": "保单结算",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			},
+			{
+				"path": "pages/activity/index", // 热门活动
+				"style": {
+					"navigationBarTitleText": "热门活动",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			}, {
+				"path": "pages/activity/detail", // 活动详情
+				"style": {
+					"navigationBarTitleText": "",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black"
+				}
+			}
+		]
+		},
+		{
+			"root":"pagesB",
+			"pages":[
+				{
+					"path": "pages/ownCar/carDossier", // 个人中心 -> 爱车档案
+					"style": {
+						"navigationBarTitleText": "我的爱车",
+						"backgroundTextStyle": "dark",
+						"navigationBarBackgroundColor": "#fff",
+						"backgroundColorTop": "#21242d",
+						"navigationBarTextStyle": "black",
+						"enablePullDownRefresh": true
+						
+					}
+				},
+				{
+					"path": "pages/ownCar/carBrand", // 个人中心 -> 爱车档案 -> 选择品牌
+					"style": {
+						"navigationBarTitleText": "选择品牌",
+						"backgroundTextStyle": "dark",
+						"navigationBarBackgroundColor": "#fff",
+						"backgroundColorTop": "#21242d",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "pages/ownCar/editDossier", // 个人中心 -> 爱车档案 -> 编辑爱车信息
+					"style": {
+						"navigationBarTitleText": "新增车辆",
+						"backgroundTextStyle": "dark",
+						"navigationBarBackgroundColor": "#fff",
+						"backgroundColorTop": "#21242d",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "pages/integral/integral", // 个人中心 -> 积分
+					"style": {
+						"navigationStyle": "custom",
+						"app-plus": {
+							"titleNView": false,
+							"bounce": "none",
+							"pullToRefresh": {
+								"style": "circle",
+								"offset": "70px"
+							}
+						}
+					}
+				},
+				{
+					"path": "pages/integral/pointsMall", // 个人中心 -> 积分 -> 积分商城
+					"style": {
+						"navigationBarTitleText": "积分商城",
+						"backgroundTextStyle": "dark",
+						"navigationBarBackgroundColor": "#fff",
+						"backgroundColorTop": "#21242d",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "pages/setting/login", // 授权电话，微信页面
+					"style": {
+						"navigationBarTitleText": "开启小程序",
+						"backgroundTextStyle": "dark",
+						"navigationBarBackgroundColor": "#fff",
+						"backgroundColorTop": "#21242d",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "pages/setting/userSet", //用户设置
+					"style": {
+						"navigationBarTitleText": "用户设置",
+						"backgroundTextStyle": "dark",
+						"navigationBarBackgroundColor": "#fff",
+						"backgroundColorTop": "#21242d",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "pages/setting/upDateName", // 修改用户姓名
+					"style": {
+						"navigationBarTitleText": "修改姓名",
+						"backgroundTextStyle": "dark",
+						"navigationBarBackgroundColor": "#fff",
+						"backgroundColorTop": "#21242d",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "pages/appoint/records", // 个人中心 -> 我的预约
+					"style": {
+						"navigationBarTitleText": "我的预约",
+						"backgroundTextStyle": "dark",
+						"navigationBarBackgroundColor": "#fff",
+						"backgroundColorTop": "#21242d",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "pages/appoint/recordsDetail", // 个人中心 -> 我的预约 -> 预约详情
+					"style": {
+						"navigationBarTitleText": "预约详情",
+						"backgroundTextStyle": "dark",
+						"navigationBarBackgroundColor": "#fff",
+						"backgroundColorTop": "#21242d",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "pages/order/orderList", // 个人中心 -> 我的订单
+					"style": {
+						"navigationBarTitleText": "订单列表",
+						"backgroundTextStyle": "dark",
+						"navigationBarBackgroundColor": "#fff",
+						"backgroundColorTop": "#21242d",
+						"navigationBarTextStyle": "black",
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "pages/order/detail", 			// 订单详情
+					"style": {
+						"navigationStyle": "custom"
+					}
+				}
+			]
+		}
+	],
+
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "4S服务",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"sitemapLocation": "sitemap.json",
+	"condition": { //	模式配置，仅开发期间生效
+		"current": 0, //	当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "userSet", //模式名称
+			"path": "pagesB/pages/setting/userSet"
+		}]
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#4c90f4",
+		"borderStyle": "white",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"iconPath": "static/img/tabBar/home.png",
+				"selectedIconPath": "static/img/tabBar/home-on.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/newCar/carList",
+				"iconPath": "static/img/tabBar/car.png",
+				"selectedIconPath": "static/img/tabBar/car-on.png",
+				"text": "看车"
+			},
+			{
+				"text": "商城",
+				"pagePath": "pages/shop/shop",
+				"iconPath": "static/img/tabBar/shop.png",
+				"selectedIconPath": "static/img/tabBar/shop-on.png"
+			},
+			{
+				"pagePath": "pages/information/information",
+				"iconPath": "static/img/tabBar/info.png",
+				"selectedIconPath": "static/img/tabBar/info-on.png",
+				"text": "资讯"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"iconPath": "static/img/tabBar/user.png",
+				"selectedIconPath": "static/img/tabBar/user-on.png",
+				"text": "我的"
+			}
+		]
+
+	}
+}

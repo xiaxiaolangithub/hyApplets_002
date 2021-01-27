@@ -1,0 +1,146 @@
+.infoDetailPage{
+	.news_container{
+		padding-bottom: 150rpx;
+		.news_title{
+			padding-top: 15rpx;
+			width:666rpx;
+			margin: 0 auto;
+			color:$uni-text-color-grey;
+			font-size: 46rpx;
+			line-height: 62rpx;
+			font-weight: bold;
+		}
+		.news_info{
+			width:666rpx;
+			margin: 0 auto;
+			color:$uni-text-color-memo;
+			font-size: 22rpx;
+			padding:15rpx 0 30rpx;
+			padding-top:20rpx;
+			box-sizing: border-box;
+		}
+		.news_date{
+			font-size: 24rpx;
+		}
+		.anchor_name {
+			margin-bottom:5rpx;
+			font-size: 20rpx;
+			.anchor{
+				color:$uni-text-color-grey;
+				font-size: 30rpx;
+				margin-right:10rpx;
+			}
+		}
+		.news_content{
+			width:690rpx;
+			margin: 0 auto;
+			font-size: 32rpx;
+			color:$uni-text-color-grey;
+			margin-bottom: 60rpx;
+			line-height:56rpx;
+			padding-top: 40rpx;
+		}
+		.news_car{
+			width:100%;
+			margin-bottom: 185rpx;
+			display: flex;
+			justify-content: center;
+			.news_car_inner{
+				width:690rpx;
+				height: 250rpx;
+				background:rgba(245,246,248,1);
+				border-radius:20rpx;
+				padding: 56rpx 40rpx;
+				box-sizing: border-box;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+		.car_left{
+			width:40%;
+			align-items: center;
+			.car_name{
+				color:rgba(20,30,52,1);
+				width: 100%;
+				text-overflow: -o-ellipsis-lastline;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				line-clamp: 2;
+				-webkit-box-orient: vertical;
+				font-size: 34rpx;
+				line-height: 48rpx;
+			}
+			.car_price{
+				padding-top:10rpx;
+				font-size:34rpx;
+				font-family:PingFang SC;
+				color:rgba(20,30,52,1);
+				background:linear-gradient(0deg,rgba(57,117,233,1) 0%, rgba(105,172,255,1) 100%);
+				-webkit-background-clip:text;
+				-webkit-text-fill-color:transparent;
+			}
+		}
+		.car_right{
+			width:60%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			.car_img{
+				width:232rpx;
+				height: 144rpx;
+				border-radius: 10rpx;
+			}
+			.right_icon{
+				width:25rpx;
+				height: 25rpx;
+				margin-left: 45rpx;
+			}
+		}
+	}
+	.news_footer{
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height:100rpx;
+		background: $uni-color-main;
+	}
+	.footer_inner{
+		width:690rpx;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		height: 100%;
+		align-items: center;
+		padding:0 20rpx;
+		box-sizing: border-box;
+	}
+	.share{
+		display: flex;
+		align-items: center;
+		border: 0 ;
+		
+	}
+	button{
+		background:  $uni-color-main;
+		
+	}
+	.share_friend{
+		width:100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		color: #fff;
+		font-size: 30rpx;
+		.img{
+			width: 76rpx;
+			height: 76rpx;
+		}
+		
+	}
+	.share_friends::after{
+		border: 0;
+	}
+}

@@ -1,0 +1,191 @@
+.apponitRecordsPage{
+	position: relative;
+	height: 100%;
+	.order_section{
+		background: #F7F7F7;
+		// 订单列表
+		.page_inner{
+			width:690rpx;
+			margin: 0 auto;
+		}
+		.list{
+			background:#fff;
+			margin: 30rpx 0;
+			border-radius:20rpx;
+			padding:30rpx 30rpx 38rpx 30rpx;
+			box-sizing: border-box;
+		}
+		.order_info{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size:26rpx;
+			padding-bottom: 35rpx;
+			.order_num{
+				color:rgba(151,156,167,1);
+			}
+			.order_status{
+				color:rgba(236,97,42,1);
+			}
+		}
+		// 单个商品
+		.order_good{
+			display: flex;
+			.img{
+				width:180rpx;
+				height: 180rpx;
+				border-radius: 5rpx;
+				margin-right: 34rpx;
+				image{
+					width:100%;
+					height: 100%;
+				}
+			}
+			.good_info{
+				width:430rpx;
+				padding-top:5rpx;
+				.name{
+					font-size:30rpx;
+					color:rgba(20,30,52,1);
+					margin-bottom: 15rpx;
+				}
+				.total_num{
+					color:rgba(151,156,167,1);
+					font-size: 28rpx;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					.iconfont{
+						color:rgba(151,156,167,1);
+						margin-left: 8rpx;
+						
+					}
+				}
+				.price{
+					margin-bottom: 20rpx;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					.price_left{
+						display: flex;
+						align-items: center;
+					}
+					.price_icon{
+						color:rgba(20,30,52,1);
+						font-size: 28rpx;
+						margin-right: 8rpx;
+					}
+					.price_num{
+						color:rgba(20,30,52,1);
+						font-size: 34rpx;
+						margin-right: 12rpx;
+					}
+					.good_num{
+						font-size:26rpx;
+						color:rgba(151,156,167,1);
+					}
+				}
+				.order_date{
+					color:rgba(20,30,52,1);
+					font-size: 28rpx;
+				}
+				.pay_date{
+					font-size:24rpx;
+					color:rgba(151,156,167,1);
+					padding-top:10rpx;
+				}
+			}
+		}
+		// 占位
+		.place{
+			border-bottom: 2px dashed #D0DBE2;
+			margin:40rpx 0;
+		}
+		
+		// 子商品
+		.chid_goods{
+			transition: height 0.3s linear;
+			.child{
+				display: flex;
+				margin-bottom:30rpx;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			.child_img{
+				width:160rpx;
+				height: 160rpx;
+				border-radius: 15rpx;
+				margin-right: 40rpx;
+				image{
+					width:160rpx;
+					height: 160rpx;
+				}
+			}
+			.child_info{
+				width: 430rpx;
+				.child_name{
+					font-size:28rpx;
+					color:rgba(20,30,52,1);
+					line-height:32rpx;
+					padding:15rpx 0 25rpx 0;
+				}
+			}
+			.child_price{
+				.price_icon{
+					color:rgba(20,30,52,1);
+					font-size: 28rpx;
+					margin-right: 8rpx;
+				}
+				.price{
+					color:rgba(20,30,52,1);
+					font-size: 34rpx;
+					margin-right: 15rpx;
+				}
+				.good_num{
+					font-size:26rpx;
+					color:rgba(151,156,167,1);
+				}
+			}
+			
+		}
+		
+		
+		// 取消和预约
+		.order_footer{
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				font-size: 28rpx;
+				padding-top:35rpx;
+				.cancel{
+					width:170rpx;
+					height:60rpx;
+					border:1px solid rgba(51,119,255,1);
+					border-radius:12rpx;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color:rgba(51,119,255,1);
+				}
+				.edit{
+					width:170rpx;
+					height:60rpx;
+					background:rgba(51,119,255,1);
+					border-radius:12rpx;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color:#fff;
+					margin-left: 30rpx;
+				}
+			}
+		
+	}
+
+
+	// 暂无订单
+	.nodata_coupon{
+		padding-top: 180rpx;
+	}
+}

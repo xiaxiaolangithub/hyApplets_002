@@ -1,0 +1,52 @@
+// 该文件是所有页面的样式集合
+@import './common.scss';	     									// 公共样式
+@import '../../pagesB/static/setting/login.scss';      			
+@import './user/user.scss';     									// 我的界面样式
+@import  '/shop/homePage.scss';										// 首页
+
+@import '../../pagesB/static/integral/integral.scss';     			// 我的积分	
+@import  '../../pagesB/static/integral/pointsMall.scss';			// 积分商城 
+
+@import  '../../pagesB/static/order/orderList.scss';				// 订单列表
+@import  '../../pagesB/static/order/detail.scss';					// 订单详情列表
+
+@import './user/store.scss';   
+
+
+@import '/cardBag/couponDetails.scss';								// 优惠券详情
+@import '/cardBag/cardBag.scss';     								// 卡包页面样式 
+@import  '/cardBag/couponCenter.scss';								// 领券中心
+
+@import '../../pagesB/static/carDossier/carDossier.scss';			// 我的爱车档案
+@import '../../pagesB/static/carDossier/editDossier.scss';			// 爱车档案编辑
+@import '../../pagesB/static/carDossier/carBrand.scss';				// 选择品牌
+
+@import '/information/information.scss';	     					// 资讯样式 
+@import  '/information/infoDetail.scss';							// 资讯详情页面
+
+// @import  '/reserve/exclusive.scss';								// 专属服务页面
+// @import  '/reserve/excluServices.scss';							// 申请专属服务
+// @import '/reserve/waitApponit.scss';								// 待预约
+@import '/reserve/maintain.scss';									// 预约保养
+@import '/reserve/selectMaintain.scss';								// 选择保养项目
+@import '/reserve/confirmMaintain.scss';							// 预约保养已选商品/服务
+
+
+@import '/newCar/carList.scss';										// 新车列表
+@import '/newCar/carDetail.scss';									// 汽车详情
+@import '/newCar/askPrice.scss';									// 询问底价
+@import '/newCar/carModel.scss';									// 车型展示
+
+@import  '/shop/shop.scss';											// 商城首页
+@import  '/shop/shopSearch.scss';									// 商品搜索
+@import  '/shop/category.scss';										// 商品分类
+@import  '/shop/goodDetail.scss';									// 商品详情
+@import  '/shop/goodList.scss';										// 商品列表
+@import  '/shop/insurance.scss';									// 保险
+@import  '/shop/insuranceDetail.scss';								// 保险详情
+@import  '/shop/insuranceFrom.scss';								// 保险信息
+
+@import  '/user/apponitRecords.scss';								// 预约列表 
+@import  '/user/apponitDetail.scss';								// 预约详情
+
+@import  '/shop/insurance_form.scss';								// 投保信息

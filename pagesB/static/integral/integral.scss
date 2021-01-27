@@ -1,0 +1,210 @@
+.integralPage{
+	.user_section{
+		height: 570rpx;
+		background: url('https://img.hangzhouhuiyao.cn/images/hycar/integral/back.png') center center no-repeat;
+		background-size: 100% 100%;
+		.bg{
+			width: 100%;
+			height: 100%;
+		}
+		// 积分
+		.integral_section{
+			padding:40rpx 0 20rpx 0;
+			width:690rpx;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.left{
+				color:#FFFFFF;
+				font-size: 34rpx;
+				font-weight: normal;
+			}
+			.num{
+				margin-right: 8rpx;
+				font-size: 80rpx;
+				font-weight: bold;
+			}
+			.right{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color:#fff;
+				font-size: 30rpx;
+				width:180rpx;
+				height:60rpx;
+				background:linear-gradient(-90deg,rgba(51,119,255,1),rgba(122,203,255,1));
+				border-radius:30px;
+				box-sizing: border-box;
+				padding-left: 8rpx;
+			}
+			.icon-xiangyoujiantou{
+				font-size:26rpx;
+				margin-top:5rpx;
+				margin-left: 8rpx;
+			}
+		}
+	
+		// 签到
+		.sign_section{
+			width:690rpx;
+			margin: 0 auto;
+			background-color: #fff;
+			border-radius:20rpx;
+			padding: 20rpx 40rpx 28rpx;
+			box-sizing: border-box;
+			.sign_top{
+				color:$uni-text-color-grey;
+				font-size: 36rpx;
+				padding-bottom: 28rpx;
+			}
+			.sign_days{
+				color:$uni-color-main;
+				font-size: 52rpx;
+				margin: 0 5rpx;
+				font-weight: bold;
+			}
+			.sign_list{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.list{
+				width:130rpx;
+				height:160rpx;
+				text-align: center;
+				color:#fff;
+				background: rgba(203,213,220,1);
+				margin-bottom: 20rpx;
+				border-radius:12rpx;
+				margin-right: 30rpx;
+				padding:10rpx 0;
+				font-size: 0;
+				box-sizing: border-box;
+				&:nth-child(4) {
+					margin-right: 0;
+				}
+				&.signed{
+					background:linear-gradient(0deg,rgba(51,119,255,1) 0%,rgba(122,203,255,1) 100%);
+				}
+			}
+			.img{
+				width:66rpx;
+				height: 66rpx;
+			}
+			.list_day{
+				font-size: 26rpx;
+				padding-bottom: 5rpx;
+			}
+			.list_num{
+				font-size: 24rpx;
+			}
+			.last_list{
+				width:290rpx;
+				color:#fff;
+				background: rgba(203,213,220,1);
+				padding:10rpx 0 10rpx 25rpx;
+				box-sizing: border-box;
+				height: 160rpx;
+				border-radius:12rpx;
+				position: relative;
+				&.signed{
+					background:linear-gradient(0deg,rgba(51,119,255,1) 0%,rgba(122,203,255,1) 100%);
+				}
+				.text{
+					font-size: 24rpx;
+					padding-top:8rpx;
+				}
+				.image{
+					position: absolute;
+					right: 10rpx;
+					bottom:1rpx;
+					image{
+						height: 136rpx;
+						width:121rpx;
+					}
+				}
+			}
+			
+			.sign_btn{
+				width: 610rpx;
+				height: 80rpx;
+				background: linear-gradient(180deg, #78C9FF, #3479FF);
+				border-radius: 12rpx;
+				color:#fff;
+				font-size: 36rpx;
+				line-height: 80rpx;
+			}
+			.noCan{
+				color:#999999;
+				background: #EBEBEB;
+			}
+		}
+		
+		
+		// 每日任务
+		.task_section{
+			width:690rpx;
+			background: #fff;
+			margin: 30rpx auto;
+			box-sizing: border-box;
+			padding:30rpx 45rpx;
+			border-radius:20rpx;
+			.task_info{
+				font-size: 0;
+			}
+			.title_change{
+				margin-bottom: 30rpx;
+			}
+			.list{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding-bottom:40rpx;
+				&:last-child {
+					padding-bottom: 0;
+				}
+			}
+			.task_left{
+				display: flex;
+				align-items: center;
+				image{
+					width:66rpx;
+					height: 66rpx;
+					margin-right: 20rpx;
+				}
+			}
+			.task_text{
+				color:$uni-text-color-grey;
+				font-size: 30rpx;
+				line-height: 30rpx;
+			}
+			.task_num{
+				font-weight:500;
+				color:$uni-text-color-tip;
+				font-size: 24rpx;
+			}
+			.task_right{
+				color:$uni-text-color-tip;
+				font-size: 30rpx;
+				padding:0rpx 20rpx;
+				width:160rpx;
+				height:60rpx;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.task_nocomplete{
+				background:linear-gradient(-90deg,rgba(51,119,255,1) 0%,rgba(122,203,255,1) 100%);
+				border-radius:30px;
+				width:160rpx;
+				height:60rpx;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 30rpx;
+				color:#fff;
+			}
+		}
+	
+	}
+}

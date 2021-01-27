@@ -1,0 +1,267 @@
+.confirmMaintainPage{
+	.page_top{
+		background:#F7F7F7;
+		padding:0 30rpx;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 80rpx;
+		.left{
+			display: flex;
+			align-items: center;
+		}
+		.img{
+			width:40rpx;
+			height: 30rpx;
+		}
+		.name{
+			font-size: 28rpx;
+			color:$uni-text-color-tip;
+			margin: 0 15rpx;
+		}
+		.icon-xiangyoujiantou{
+			color:$uni-text-color-memo;
+			font-size: 24rpx;
+		}
+		.right{
+			color:$uni-text-color-memo;
+			font-size: 26rpx;
+		}
+	}
+	
+	
+	
+	// 保养项目选择
+	.maintain_box{
+		
+		// 常规保养项目
+		.top{
+			display: flex;
+			align-items: center;
+			font-size: 34rpx;
+			color:$uni-text-color-grey;
+			padding:40rpx 30rpx;
+			padding-bottom: 0;
+			box-sizing: border-box;
+			background-color: #FFFFFF;
+		}
+		
+		// 折叠选择
+		.collapse_box{
+			.collapse_top{
+				position: relative;
+			}
+			.title{
+				margin-left: 30rpx;
+			}
+			.tui-list-cell{
+				padding:33rpx 30rpx !important;
+				// border-bottom: 1rpx solid #CCCCCC;
+				display: flex;
+				align-items: center;
+				&::after{
+					left: 0 !important;
+					border-bottom: 1rpx solid #CCCCCC !important;
+				}
+			}
+			.main{
+				color:$uni-text-color-grey;
+				font-size: 30rpx;
+				margin-bottom: 9rpx;
+			}
+			.vice{
+				color:#9BA0AB;
+				font-size: 26rpx;
+			}
+			.check_group{
+				border-bottom: 1rpx solid #CCCCCC;
+				padding:25rpx 30rpx 25rpx 65rpx;
+				box-sizing: border-box;
+			}
+			.detail_list{
+				display: flex;
+				margin-bottom: 30rpx;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			.detail_label{
+				width:100%;
+				display: flex;
+				align-items: center;
+			}
+			.detail_content{
+				color:$uni-text-color-grey;
+				font-size: 26rpx;
+			}
+			.tips{
+				color:#CCCCCC;
+				font-size: 22rpx;
+			}
+			.tui-collapse-icon{
+				color:$uni-text-color-memo !important;
+			}
+		}
+	
+		
+		// 占位栏
+		.place{
+			width:750rpx;
+			height:20rpx;
+			background:#F7F7F7;
+		}
+		
+		
+		// 选择服务时间
+		.time_box{
+			padding:40rpx 30rpx 50rpx 30rpx;
+			box-sizing: border-box;
+			background-color: #FFFFFF;
+			.time_top{
+				color:$uni-text-color-grey;
+				font-size: 34rpx;
+			}
+			.list{
+				border-bottom: 1px solid #EAE8EB;
+				padding-top:40rpx;
+				padding-left: 12rpx;
+				box-sizing: border-box;
+				.title{
+					color:$uni-text-color-grey;
+					font-weight: bold;
+					font-size: 40rpx;
+					padding-bottom: 5rpx;
+				}
+				.list_type{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 15rpx 0;
+					padding-left: 4rpx;
+					.hoder_type{
+						font-size:30rpx;
+						color: #CCCCCC;
+					}
+					.uni-input{
+						font-size:28rpx;
+					}
+				}
+				.value{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 36rpx 0 30rpx 0;
+					.content {
+						width:100%;
+						text-align: left;
+					}
+					.date_hoder {
+						font-size:28rpx;
+						color: #CCCCCC;
+					}
+				}
+				.icon-xiangyoujiantou{
+					color:$uni-text-color-grey;
+					font-size: 28rpx;
+					font-weight: bold;
+					margin-right: 15rpx;
+				}
+			}
+			
+			.handle{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding-top: 70rpx;
+				box-sizing: border-box;
+				.confirm{
+					width:100%;
+					height:80rpx;
+					border-radius:10rpx;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin: 0;
+				}
+				.confirm{
+					background: $uni-color-main;
+					color:#fff;
+					font-size: 36rpx;
+				}
+			}
+		}
+	}
+	
+	
+	
+	.process{
+		padding-top: 30rpx;
+		padding-bottom: 80rpx;
+		.list{
+			display: flex;
+			align-items: center;
+		}
+		.process_title{
+			font-size:34rpx;
+			color:$uni-text-color-grey;
+			padding: 30rpx;
+			box-sizing: border-box;
+		}
+		.process_box{
+			width:33.33%;
+			text-align: center;
+		}
+		.box_top{
+			width:100%;
+			height: 100rpx;
+			display: flex;
+			justify-content: center;
+			position: relative;
+			.process_icon{
+				width:70rpx;
+				height: 70rpx;
+			}
+			.right_icon{
+				right:-30rpx;
+				width:70rpx;
+				height: 30rpx;
+				top:22%;
+				position: absolute;
+			}
+		}
+		.box_bottom{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			padding-top:15rpx;
+			image{
+				position: absolute;
+				width:110rpx;
+				height: 80rpx;
+			}
+		}
+		.process_name{
+			color:rgba(126,133,150,1);
+			font-size: 25rpx;
+		}
+	}
+	
+	.tui-popup-show{
+		height: 500rpx !important;
+		.btn{
+			width: 690rpx;
+			margin: 0 auto;
+		}
+		.save{
+			background: $uni-color-main;
+		}
+		.long-data-picker{
+			height: 300rpx;
+			picker-view{
+				 height: 80%;
+			 }
+			
+		}
+	}
+}

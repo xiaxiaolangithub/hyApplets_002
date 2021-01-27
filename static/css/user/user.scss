@@ -1,0 +1,226 @@
+.userPage{
+	// 头像、姓名、登录
+	.login_section{
+		height: 380rpx;
+		background: url('https://img.hangzhouhuiyao.cn/images/hycar/user/my-top-bg.png') center center no-repeat;
+		background-size: 100% 100%;
+		position: relative;
+		.interBar .uni-navbar__header{
+			padding-left: 0;
+		}
+		.user_info_box{
+			height: 110rpx;
+			display:flex;
+			align-items:center;
+			z-index: 999999;
+			position: absolute;
+			top: 160rpx;
+			left: 35rpx;
+			.portrait{
+				width: 110rpx;
+				height: 110rpx;
+				border-radius: 50%;
+				border: 4rpx solid #FFFFFF;
+			}
+			.username{
+				padding-bottom: 10rpx;
+				margin-left: 20rpx;
+				font-weight: bold;
+				color:$uni-text-color-grey;
+				font-size: 40rpx;;
+				color: #FFFFFF;
+				margin-left: 20upx;
+			}
+			.go_login{
+				padding-left: 35rpx;
+				display: flex;
+				align-items: center;
+				font-size: 40rpx;
+				color: #fff;
+				font-weight: bold;
+				.icon-xiangyoujiantou{
+					color: #fff;
+					font-size: 30rpx;
+					font-weight: bold;
+					margin-left: 5rpx;
+					margin-top:5rpx;
+				}
+			}
+		}
+	}
+	
+	
+	// 优惠券和积分
+	.coupon_integral{
+		width: 590rpx;
+		height: 140rpx;
+		margin: 0 auto;
+		background-color: #FFFFFF;
+		border-radius: 20rpx;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		box-shadow: 0px 2px 4px #e4e4e4;
+		margin-top:-50rpx;
+		z-index: 99999;
+		position: relative;
+	
+		.left{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 295rpx;
+			.image2{
+				width: 98rpx;
+				height: 60rpx;
+				margin-right: 18rpx;
+			}
+			view{
+				width: 100%;
+				text-align: center;
+				margin-top: 10rpx;
+				font-size: 30rpx;
+			}
+		}
+		.right{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 295rpx;
+			.image2{
+				width: 74rpx;
+				height: 64rpx;
+				margin-left: 13rpx;
+			}
+			view{
+				width: 100%;
+				text-align: center;
+				margin-top: 10rpx;
+				font-size: 30rpx;
+			}
+		}
+		.active_center{
+			width: 4rpx;
+			height: 90rpx;
+			border-radius: 2rpx;
+			background-color: #EEEEEE;
+		}
+	}
+	
+	// 我的爱国、我的订单
+	.car_section{
+		padding-bottom:30rpx;
+		margin: 30rpx auto;
+		width: 690rpx;
+		background: #fff;
+		border-radius:12rpx;
+		.title{
+			padding: 30rpx 25rpx;
+			color:$uni-text-color-grey;
+			font-size: 36rpx;
+			font-weight: bold;
+		}
+		.all_btn{
+			color:$uni-text-color-tip;
+			font-size: 24rpx;
+			display: flex;
+			align-items: center;
+			height: 23rpx;
+			.icon-xiangyoujiantou{
+				font-size: 26rpx !important;
+				margin-left: 10rpx;
+			}
+		}
+		
+		.car_list{
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0 30rpx;
+		}
+		.list{
+			width:300rpx;
+			height: 150rpx;
+			margin-bottom: 30rpx;
+			padding:60rpx 0 0 30rpx;
+			text-align: center;
+			box-sizing: border-box;
+			color:#fff;
+			font-size: 32rpx;
+			text-align: left;
+			&:nth-child(2n) {
+				margin-left: 30rpx;
+			}
+		}
+		.car_top{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-right: 30rpx;
+		}
+		.order_list{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 40rpx;
+			
+			.item_list{
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				width: 105rpx;
+				position: relative;
+				.num{
+					position: absolute;
+					right: -2rpx;
+					top: -15rpx;
+					width: 36rpx;
+					height: 36rpx;
+					border: 2rpx solid $uni-color-main;
+					border-radius: 50%;
+					font-size: 24rpx;
+					color:$uni-color-main;
+					line-height: 36rpx;
+					text-align: center;
+					background:#fff;
+				}
+				image{
+					width: 60rpx;
+					height: 60rpx;
+				}
+				.order_title{
+					width: 100%;
+					font-size: 24rpx;
+					text-align: center;
+					margin-top: 18rpx;
+					color:$uni-text-color-tip;
+				}
+			}
+		}
+	}
+	
+	// 账号信息
+	.feedback{
+		margin-bottom: 120rpx;
+		.feedback_inner{
+			width:690rpx;
+			margin: 0 auto;
+			height:100rpx;
+			background:rgba(255,255,255,1);
+			border-radius:12rpx;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding:0 30rpx;
+			box-sizing: border-box;
+		}
+		.feedback_text{
+			color:$uni-text-color-grey;
+			font-size: 32rpx;
+			font-weight: bold;
+		}
+		.icon-xiangyoujiantou{
+			color:#8A8C90;
+			font-size: 26rpx;
+		}
+	}
+}

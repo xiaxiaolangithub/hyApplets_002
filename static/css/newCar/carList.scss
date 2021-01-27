@@ -1,0 +1,59 @@
+.carListPage{
+	.page_inner, .noData{
+		padding-bottom: 120rpx;
+	}
+	.nodata_coupon{
+		padding-top:180rpx;
+	}
+	.list{
+		padding:50rpx 30rpx 50rpx 34rpx;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #E5E5E5;
+		height: 230rpx;
+		.left{
+			width:210rpx;
+			// height: 80rpx !important;
+			margin-right: 25rpx;
+			max-height: 80rpx;
+		}
+		.right{
+			width:66%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.name{
+			color: $uni-text-color-grey;
+			font-size: 36rpx;
+			font-weight: bold;
+			margin-bottom: 10rpx;
+		}
+		.price{
+			font-size: 28rpx;
+			margin-bottom:10rpx;
+			display: flex;
+			align-items: center;
+			color:$uni-text-color-tip;
+		}
+		.discount{
+			color:$uni-text-color-price;
+			font-size: 30rpx;
+			display: flex;
+			align-items: center;
+		}
+		.ask{
+			background:#3377F6;
+			border-radius: 12rpx;
+			width:150rpx;
+			height:70rpx;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 28rpx;
+			color:#fff;
+		}
+	}
+}
