@@ -19,8 +19,9 @@ import hxNavbar from "@/components/hx-navbar/hx-navbar.vue" 	// 自定义头部�
 Vue.component('hx-navbar',hxNavbar)
 
 
-import {realmImg} from '@/static/js/tool.js'					// 引用服务器图片封装
+import {realmImg, realmImgTwo} from '@/static/js/tool.js'					// 引用服务器图片封装
 Vue.prototype.realmImg = realmImg;
+Vue.prototype.realmImgTwo = realmImgTwo;
 
 App.mpType = 'app'
 

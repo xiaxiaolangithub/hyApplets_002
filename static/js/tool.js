@@ -54,6 +54,13 @@ function realmImg(way) {
 }
 
 
+// 图片地址 way 图片路径
+function realmImgTwo(way) {
+	let api = 'https://img-dev.hangzhouhuiyao.cn';
+	let url = `${api}/images/hyApplets_002/${way}`
+	return url
+}
+
 
 // 数组去重
 function distinct(arr,key){
@@ -140,6 +147,7 @@ export {
 	getCurrentDate,
 	checkValue,
 	realmImg,
+	realmImgTwo,
 	distinct,
 	tranNumber,
 	getArrDifference,

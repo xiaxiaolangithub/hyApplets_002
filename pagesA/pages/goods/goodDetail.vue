@@ -38,7 +38,7 @@
 		<!-- 底部 -->
 		<view class="page_footer">
 			<view class="kefu" @tap="tapPhone">
-				<image :src="realmImg('goods/kefu.png')" mode="widthFix"></image>
+				<image :src="realmImgTwo('goods/kefu.png')" mode="widthFix"></image>
 				联系客服
 			</view>
 			<view class="booking" v-if="goods.stock>0" hover-class="handle_hover" @tap="payBefore">一键购买</view>

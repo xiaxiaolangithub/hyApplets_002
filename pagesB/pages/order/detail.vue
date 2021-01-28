@@ -89,7 +89,7 @@
 				<view class="refund" hover-class="hover" v-if="road==='待付款'" @tap="cancelReady">取消订单</view>
 				<!-- <view class="refund" v-if="road==='已支付'">申请退款</view> -->
 				<view class="kefu" v-if="road!=='商品详情'" hover-class="hover" @tap="tapPhone">
-					<image :src="realmImg('goods/kefu.png')" class="kefu_icon" mode="widthFix"></image>
+					<image :src="realmImgTwo('goods/kefu.png')" class="kefu_icon" mode="widthFix"></image>
 					咨询
 				</view>
 			</view>

@@ -60,8 +60,8 @@
 			.shop{
 				width: 180rpx;
 				height: 66rpx;
-				background: #3377FF;
-				border-radius: 12rpx;
+				background: $uni-text-color-price;
+				border-radius: 0px 0px 0px 30rpx;
 				display: flex;
 				justify-content: center;
 				align-items: center;

@@ -4,7 +4,7 @@
 			<view class="item" v-for="(item,index) in navList" :key="index" @click="bindNav(index)">
 				<view class="text" :class="[navIndex==index?'active':'']">{{item}}</view>
 				<view class="line">
-					<image :src="realmImg('cardBag/line.png')" v-if="navIndex==index" ></image>
+					<image :src="realmImgTwo('cardBag/line.png')" v-if="navIndex==index" ></image>
 					<image  v-else></image>
 				</view>
 			</view>

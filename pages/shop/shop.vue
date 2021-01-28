@@ -1,7 +1,7 @@
 <template>
 	<view class="shopPage">
 		<!-- 头部背景图 -->
-		<image class="header_img" :src="realmImg('shopHome/header_back.png')" mode="widthFix"></image>
+		<image class="header_img" :src="realmImgTwo('shopHome/header_back.png')" mode="widthFix"></image>
 		<!-- 自定义导航栏 -->
 		<!-- <hx-navbar :back="false" class="shop_home_navbar" :fixed="true" transparent="auto" :background-color="[[78,132,230],[99,201,238],[190,245,228]]"
 		 :pageScroll.sync="scrollData">
@@ -15,7 +15,8 @@
 		</hx-navbar> -->
 
 		<!-- 新写的 -->
-		<hx-navbar :back="false" class="shop_home_navbar" :fixed="true" transparent="auto" :background-color="[[78,132,230],[99,201,238],[190,245,228]]"
+		<hx-navbar :back="false" class="shop_home_navbar" :fixed="true" 
+		transparent="auto" :background-color="[[211,0,0],[255,86,109],[255,65,105]]"
 		 :pageScroll.sync="scrollData">
 			<block slot="left"></block>
 			<view class="input_view" style="width:100%; font-size: 32rpx;">
