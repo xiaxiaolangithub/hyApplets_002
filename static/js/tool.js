@@ -48,7 +48,7 @@ function checkValue(obj, key) {
 
 // 图片地址 way 图片路径
 function realmImg(way) {
-	let api = 'https://img.hangzhouhuiyao.cn';
+	let api = 'https://img-dev.hangzhouhuiyao.cn';
 	let url = `${api}/images/hycar/${way}`
 	return url
 }

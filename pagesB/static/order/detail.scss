@@ -2,7 +2,7 @@
 	.top_box{
 		height: 388rpx;
 		&.noPay{
-			background: url("https://img.hangzhouhuiyao.cn/images/hycar/orderDetail/noPay.png") center center no-repeat;
+			background: url("https://img-dev.hangzhouhuiyao.cn/images/hyApplets_002/orderDetail/noPay.png") center center no-repeat;
 			background-size: 100% 100%;
 		}
 		&.payed{
@@ -10,7 +10,7 @@
 			background-size: 100% 100%;
 		}
 		&.hasPay{
-			background: url("https://img.hangzhouhuiyao.cn/images/hycar/orderDetail/hasPay.png") center center no-repeat;
+			background: url("https://img-dev.hangzhouhuiyao.cn/images/hyApplets_002/orderDetail/hasPay.png") center center no-repeat;
 			background-size: 100% 100%;
 		}
 		&.goodsPay{
@@ -18,7 +18,7 @@
 			background-size: 100% 100%;
 		}
 		&.cancelled{
-			background: url("https://img.hangzhouhuiyao.cn/images/hycar/orderDetail/cancelled.png") center center no-repeat;
+			background: url("https://img-dev.hangzhouhuiyao.cn/images/hyApplets_002/orderDetail/cancelled.png") center center no-repeat;
 			background-size: 100% 100%;
 		}
 		.tip{

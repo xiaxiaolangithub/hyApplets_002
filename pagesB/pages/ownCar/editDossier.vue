@@ -2,7 +2,7 @@
 	<view class="editDossierPage">
 		<view class="drive">
 			<view class="inner" @click="chooseImg">
-				<image :src="realmImg('carDossier/camera.png')" mode="widthFix" class="camera"></image>
+				<image :src="realmImgTwo('carDossier/camera.png')" mode="widthFix" class="camera"></image>
 				<view class="upload">点击此处扫描行驶证</view>
 			</view>
 		</view>
@@ -195,7 +195,7 @@
 					mask: true,
 				});
 				uni.uploadFile({
-					url: 'https://api-dev.hangzhouhuiyao.cn/ai/ocr',
+					url: 'https://api.hangzhouhuiyao.cn/ai/ocr',
 					filePath: FilePaths,
 					name: 'img',
 					header: {

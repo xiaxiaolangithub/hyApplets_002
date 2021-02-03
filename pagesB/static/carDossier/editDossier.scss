@@ -7,7 +7,7 @@
 			width:524rpx;
 			height: 319rpx;
 			margin: 0 auto;
-			background: url("https://img.hangzhouhuiyao.cn/images/hycar/carDossier/Driving_back.png") center center no-repeat;
+			background: url("https://img-dev.hangzhouhuiyao.cn/images/hyApplets_002/carDossier/Driving_back.png") center center no-repeat;
 			background-size: 100% 100%;
 			position: relative;
 		}
@@ -100,7 +100,7 @@
 			font-weight: bold;
 		}
 		.special_num{
-			background: url('https://img.hangzhouhuiyao.cn/images/hycar/editDossier/native.png') center center no-repeat;
+			background: url('https://img-dev.hangzhouhuiyao.cn/images/hyApplets_002/editDossier/native.png') center center no-repeat;
 			background-size: 100% 100%;
 			width:50rpx;
 			height: 50rpx;
@@ -108,7 +108,7 @@
 			justify-content: center;
 			align-items: center;
 			margin-right: 15rpx;
-			color:#3478FF;
+			color:$uni-color-main;
 		}
 		.title{
 			color:rgba(20,30,52,1);
@@ -186,8 +186,8 @@
 		width:690rpx;
 		height:80rpx;
 		margin: 80rpx  auto 0;
-		background:#3478FF;
-		border-radius:12rpx;
+		background:$uni-color-main;
+		border-radius: 0px 0px 0px 40rpx;
 		color: #fff;
 		font-size: 36rpx;
 		display: flex;
