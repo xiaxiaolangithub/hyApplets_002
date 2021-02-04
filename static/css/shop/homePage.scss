@@ -67,23 +67,21 @@
 	// 保养、洗车、领券中心、新车列表、异业联盟
 	.fun_section{
 		position: relative;
-		padding:30rpx 35rpx;
-		padding-top: 125rpx;
-		padding-bottom: 7rpx;
-		background-color: #ffffff;
+		background-color: #F7F7F7;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
+		padding: 42rpx 25rpx 0 25rpx;
 		.list{
 			width:21%;
 			font-size: 0;
 			text-align: center;
-			margin-bottom: 30rpx;
+			margin-bottom: 42rpx;
 		}
 		.img{
-			width:90rpx;
-			height: 90rpx;
+			width:75rpx;
+			height: 75rpx;
 		}
 		.fun_text{
 			font-size: 24rpx;
@@ -296,7 +294,10 @@
 	.service_team_title{
 		margin: 35rpx 0 40rpx 0;
 		font-size: 28rpx;
+		padding: 0 0 5rpx 50rpx;
 		color: #7E8596;
+		background: url('https://img.hangzhouhuiyao.cn/images/hyApplets_002/shopHome/title-bg.png') center center no-repeat;
+		background-size: 100%;
 		text{
 			font-weight: bold;
 			font-size: 36rpx;
@@ -306,30 +307,25 @@
 	}
 	.service_team_main{
 		background-color: #FFFFFF;
-		border-radius: 30rpx;
+		border: 1px solid #000000;
 		position: relative;
 		.service_team_main_menu{
 			position: absolute;
-			top: -12rpx;
 			width: 100%;
-			height: 110rpx;
 			display: flex; 
-			border-radius: 30rpx 30rpx 0 0;	
 			align-items: flex-end;
 			white-space: nowrap; 
+			color: #7E8596;
 			text{
 				font-size: 30rpx;
 			}
 			.active{
 				color: #141E34;
 				background-color: #ffffff;
-				height: 100rpx;
-				border-radius: 15rpx 15rpx 0 0;
-				padding-top: 10rpx;
 			}
 			view{
 				color: #7E8596;
-				background-color: #EBEFF7;
+				background-color: #ffffff;
 				width: 25%;
 				height: 90rpx;
 				display: inline-block;
@@ -338,17 +334,17 @@
 			}
 		}
 		.service_team_data{
-			padding-top: 90rpx;
+			padding-top: 80rpx;
 			padding-bottom: 20rpx;
 			.service_people{
-				width: 87%;
-				margin: 0 auto;
-				height: 140rpx;
-				padding:15rpx 20rpx;
+				margin: 0 22rpx;
+				height: 150rpx;
+				padding: 0 27rpx;
+				margin-bottom: 10rpx;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				background: url('https://img.hangzhouhuiyao.cn/images/hycar/exclusive/peoplebg.png') center center no-repeat;
+				background: url('https://img.hangzhouhuiyao.cn/images/hyApplets_002/shopHome/peoplebg.png') center center no-repeat;
 				background-size: 100%;
 				.bg{
 					width: 110rpx;
@@ -356,9 +352,8 @@
 					border-radius: 50%;
 				}
 				.phone{
-					width: 68rpx;
-					height: 91rpx; 
-					margin-top: 20rpx;
+					width: 60rpx;
+					height: 60rpx; 
 				}
 				.service_people_text{
 					width: 50%;
@@ -380,8 +375,8 @@
 					}
 				}
 			}
-			.service_people:first-child{
-				margin-top: 15rpx;
+			.service_people:last-child{
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -472,6 +467,64 @@
 		.phone_num{
 			color:#DACABB;
 			font-size: 32rpx;
+		}
+	}
+}
+
+//首页卡片
+.active_box{
+	width: 100%;
+	height: 170rpx;
+	background: url('https://img.hangzhouhuiyao.cn/images/hyApplets_002/shopHome/active-box-bg.png') center center no-repeat;
+	// background-color: #000000;
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.active_box_left{
+		width: 64%;
+		height: 100%;
+		font-size: 24rpx;
+		color: #FFFFFF;
+		text-align: center;
+		letter-spacing: 2rpx;
+		.title{
+			font-size: 36rpx !important;
+			color: #FFFFFF;
+			margin-bottom: 10rpx;
+			margin-top: 30rpx;
+			text-align: center;
+		}
+		.title_text{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.position_icon{
+				width: 20rpx;
+				height: 26rpx;
+				margin-right: 10rpx;
+			}
+		}
+		
+	}
+	.active_box_right{
+		width: 36%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		color: #FFFFFF;
+		letter-spacing: 2rpx;
+		.phone{
+			width: 62rpx;
+			height: 62rpx;
+			margin-top: 20rpx;
+		}
+		.title_text{
+			width: 100%;
+			height: 62rpx;
+			font-size: 26rpx;
+			text-align: center;
 		}
 	}
 }

@@ -7,24 +7,23 @@
 		<view class="page_inner">
 			<!-- banner部分 -->
 			<banner-page :swiperList="swiperList" @tapSwiper="tapSwiper"></banner-page>
-
-			<view class="fun_section">
-				<!-- 首页卡片 -->
-				<view class="active_box">
-					<view class="active_box_left" @tap='goShop'>
-						<view class="title">{{returnText(shopData.aliasName, 12)}}</view>
-						<view class="title_text">
-							<image class="position_icon" mode="widthFix" :src="realmImg('shopHome/position.png')"></image>
-							{{returnText(shopData.address, 15)}}
-						</view>
-					</view>
-					<view class="active_box_right" @tap='exclusive'>
-						<image class="phone" mode="widthFix" :src="realmImg('shopHome/phone.png')"></image>
-						<view class="title_text">
-							一键呼叫专属服务
-						</view>
+			<!-- 首页卡片 -->
+			<view class="active_box">
+				<view class="active_box_left" @tap='goShop'>
+					<view class="title">{{returnText(shopData.aliasName, 12)}}</view>
+					<view class="title_text">
+						<image class="position_icon" mode="widthFix" :src="realmImgTwo('shopHome/position.png')"></image>
+						{{returnText(shopData.address, 15)}}
 					</view>
 				</view>
+				<view class="active_box_right" @tap='exclusive'>
+					<image class="phone" mode="widthFix" :src="realmImgTwo('shopHome/phone.png')"></image>
+					<view class="title_text">
+						一键呼叫专属服务
+					</view>
+				</view>
+			</view>
+			<view class="fun_section">
 				<view class="list" v-for="(item, index) in funData" :key="index" @tap="tapFun(index)">
 					<image :src="item.url" mode="widthFix" class="img"></image>
 					<view class="fun_text">{{item.title}}</view>
@@ -50,7 +49,7 @@
 								</text>
 								<text>{{ (list.phone).replace(/(^\d{3}|\d{4}\B)/g,"$1 ") }}</text>
 							</view>
-							<image @tap.stop="callPerson(list.phone)" class="phone" mode="widthFix" :src="realmImg('exclusive/phonebg.png')"></image>
+							<image @tap.stop="callPerson(list.phone)" class="phone" mode="widthFix" :src="realmImgTwo('shopHome/phone.png')"></image>
 						</view>
 						<!-- 加载更多多、无更多数据 -->
 						<!-- <uni-load-more iconType="snow" :iconSize="30" :status="status" /> -->
@@ -76,39 +75,39 @@
 			return {
 				// banner数据
 				swiperList: [
-					this.realmImg('shopHome/zixun-banner.png'),
+					this.realmImgTwo('shopHome/zixun-banner.png'),
 				],
 				// 保养、洗车、领券中心、新车列表、异业联盟
 				funData: [{
-						url: this.realmImg('shopHome/box-baoyang.png'),
+						url: this.realmImgTwo('shopHome/box-baoyang.png'),
 						title: '预约保养'
 					},
 					{
-						url: this.realmImg('shopHome/box-jiuyuan.png'),
+						url: this.realmImgTwo('shopHome/box-jiuyuan.png'),
 						title: '道路救援'
 					},
 					{
-						url: this.realmImg('shopHome/box-baoxian.png'),
+						url: this.realmImgTwo('shopHome/box-baoxian.png'),
 						title: '保值服务'
 					},
 					{
-						url: this.realmImg('shopHome/box-huodong.png'),
+						url: this.realmImgTwo('shopHome/box-huodong.png'),
 						title: '热门活动'
 					},
 					{
-						url: this.realmImg('shopHome/box-dangan.png'),
+						url: this.realmImgTwo('shopHome/box-dangan.png'),
 						title: '爱车档案'
 					},
 					{
-						url: this.realmImg('shopHome/box-yhq.png'),
+						url: this.realmImgTwo('shopHome/box-yhq.png'),
 						title: '优惠券'
 					},
 					{
-						url: this.realmImg('shopHome/box-qiandao.png'),
+						url: this.realmImgTwo('shopHome/box-qiandao.png'),
 						title: '签到福利'
 					},
 					{
-						url: this.realmImg('shopHome/box-yylm.png'),
+						url: this.realmImgTwo('shopHome/box-yylm.png'),
 						title: '异业联盟'
 					},
 				],
@@ -197,7 +196,7 @@
 							this.swiperList = res.data;
 						} else {
 							this.swiperList = [{
-								img: this.realmImg('shopHome/zixun-banner.png')
+								img: this.realmImgTwo('shopHome/zixun-banner.png')
 							}]
 						}
 
@@ -225,29 +224,36 @@
 			tapFun(index) {
 				switch (index) {
 					case 0:
-						// 预约保养
-						if (this.shopData.rescuePhone) {
-							uni.showModal({
-								title: '提示',
-								content: `是否拨打预约保养电话: ${this.shopData.reservationPhone}`,
-								cancelColor: '#979CA7',
-								confirmColor: '#3377FF',
-								cancelText: '取消',
-								confirmText: '拨打',
-								success: (res) => {
-									if (res.confirm) {
-										uni.makePhoneCall({
-											phoneNumber: `${this.shopData.reservationPhone}` //仅为示例
-										});
-									} else if (res.cancel) {}
-								}
-							});
-						} else {
-							uni.showToast({
-								title: '抱歉，暂无预约保养电话！',
-								icon: 'none'
-							});
+						// // 预约保养
+						// if (this.shopData.rescuePhone) {
+						// 	uni.showModal({
+						// 		title: '提示',
+						// 		content: `是否拨打预约保养电话: ${this.shopData.reservationPhone}`,
+						// 		cancelColor: '#979CA7',
+						// 		confirmColor: '#3377FF',
+						// 		cancelText: '取消',
+						// 		confirmText: '拨打',
+						// 		success: (res) => {
+						// 			if (res.confirm) {
+						// 				uni.makePhoneCall({
+						// 					phoneNumber: `${this.shopData.reservationPhone}` //仅为示例
+						// 				});
+						// 			} else if (res.cancel) {}
+						// 		}
+						// 	});
+						// } else {
+						// 	uni.showToast({
+						// 		title: '抱歉，暂无预约保养电话！',
+						// 		icon: 'none'
+						// 	});
+						// }
+						if (!this.hasLogin) {
+							this.goLogin();
+							return false;
 						}
+						uni.navigateTo({
+							url: '/pagesA/pages/reserve/selectMaintain'
+						})
 						break;
 					case 1:
 						// 道路救援
@@ -454,6 +460,6 @@
 
 <style>
 	page {
-		background: #F7F7F7;
+		background: #ffffff;
 	}
 </style>

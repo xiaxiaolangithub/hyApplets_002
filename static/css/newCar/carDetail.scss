@@ -72,6 +72,7 @@
 		}
 		.discount{
 			font-size: 32rpx;
+			color: $uni-color-main;
 		}
 		.info{
 			font-size: 36rpx;
@@ -126,7 +127,8 @@
 			text-align: center;
 			line-height: 80rpx;
 			color:#fff;
-			font-size: 30rpx;;
+			font-size: 30rpx;
+			border-radius: 0px 0px 0px 30rpx;
 		}
 	}
 	

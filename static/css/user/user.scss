@@ -1,8 +1,8 @@
 .userPage{
 	// 头像、姓名、登录
 	.login_section{
-		height: 380rpx;
-		background: url('https://img.hangzhouhuiyao.cn/images/hycar/user/my-top-bg.png') center center no-repeat;
+		height: 394rpx;
+		background: url('https://img.hangzhouhuiyao.cn/images/hyApplets_002/user/my-top-bg.png') center center no-repeat;
 		background-size: 100% 100%;
 		position: relative;
 		.interBar .uni-navbar__header{
@@ -28,7 +28,7 @@
 				font-weight: bold;
 				color:$uni-text-color-grey;
 				font-size: 40rpx;;
-				color: #FFFFFF;
+				color: #110E0E;
 				margin-left: 20upx;
 			}
 			.go_login{
@@ -52,49 +52,44 @@
 	
 	// 优惠券和积分
 	.coupon_integral{
-		width: 590rpx;
-		height: 140rpx;
-		margin: 0 auto;
-		background-color: #FFFFFF;
-		border-radius: 20rpx;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		box-shadow: 0px 2px 4px #e4e4e4;
-		margin-top:-50rpx;
-		z-index: 99999;
-		position: relative;
-	
+	height: 140rpx;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -20px;
 		.left{
 			display: flex;
 			justify-content: center;
-			flex-wrap: wrap;
 			width: 295rpx;
 			.image2{
-				width: 98rpx;
-				height: 60rpx;
+				width: 90rpx;
 				margin-right: 18rpx;
 			}
 			view{
-				width: 100%;
 				text-align: center;
 				margin-top: 10rpx;
+				line-height: 65rpx;
 				font-size: 30rpx;
 			}
 		}
 		.right{
 			display: flex;
 			justify-content: center;
-			flex-wrap: wrap;
 			width: 295rpx;
 			.image2{
-				width: 74rpx;
-				height: 64rpx;
-				margin-left: 13rpx;
+				width: 90rpx;
+				height: 80rpx;
+				margin-right: 18rpx;
 			}
 			view{
-				width: 100%;
 				text-align: center;
+				line-height: 65rpx;
 				margin-top: 10rpx;
 				font-size: 30rpx;
 			}
@@ -110,7 +105,7 @@
 	// 我的爱国、我的订单
 	.car_section{
 		padding-bottom:30rpx;
-		margin: 30rpx auto;
+		margin: 80rpx auto 30rpx auto;
 		width: 690rpx;
 		background: #fff;
 		border-radius:12rpx;
@@ -135,21 +130,29 @@
 		.car_list{
 			display: flex;
 			flex-wrap: wrap;
-			padding: 0 30rpx;
+			justify-content: space-between;
+			padding: 0 10rpx;
+			.list{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				.image3{
+					width: 80rpx;
+					width: 80rpx;
+				}
+				view{
+					margin-top: 20rpx;
+					width: 100%;
+					font-size: 30rpx;
+				}
+			}
 		}
 		.list{
-			width:300rpx;
-			height: 150rpx;
-			margin-bottom: 30rpx;
-			padding:60rpx 0 0 30rpx;
+			margin-bottom: 20rpx;
 			text-align: center;
 			box-sizing: border-box;
-			color:#fff;
+			color: #110E0E;
 			font-size: 32rpx;
-			text-align: left;
-			&:nth-child(2n) {
-				margin-left: 30rpx;
-			}
 		}
 		.car_top{
 			display: flex;
@@ -184,7 +187,7 @@
 					background:#fff;
 				}
 				image{
-					width: 60rpx;
+					width: 80rpx;
 					height: 60rpx;
 				}
 				.order_title{

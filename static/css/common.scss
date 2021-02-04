@@ -28,7 +28,7 @@
 		}
 		.wx-checkbox-input.wx-checkbox-input-checked {
 			color: #fff;
-			background:linear-gradient(0deg,rgba(51,119,255,1),rgba(122,203,255,1));
+			background:linear-gradient(0deg,$uni-color-main,$uni-color-main);
 			border:1px solid #fff;
 		}
 	}
@@ -45,7 +45,7 @@
 		}
 		// 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改）
 		.wx-radio-input.wx-radio-input-checked{
-			background:linear-gradient(0deg,rgba(51,119,255,1),rgba(122,203,255,1));
+			background:linear-gradient(0deg,$uni-color-main,$uni-color-main);
 			border: none;
 		}
 		// 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改）
@@ -174,61 +174,4 @@
 		}
 	}
 	
-	//首页卡片
-	.active_box{
-		position: absolute;
-		left: 24rpx;
-		top: -25px;
-		width: 707rpx;
-		height: 157rpx;
-		background: url('https://img.hangzhouhuiyao.cn/images/hycar/shopHome/active-box-bg.png') center center no-repeat;
-		background-size: 100% 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		.active_box_left{
-			width: 450rpx;
-			height: 100%;
-			font-size: 24rpx;
-			color: #7E8596;
-			text-align: center;
-			.title{
-				font-size: 34rpx !important;
-				font-weight: bold;
-				color: #141E34;
-				margin-bottom: 10rpx;
-				margin-top: 30rpx;
-				text-align: center;
-			}
-			.title_text{
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				.position_icon{
-					width: 20rpx;
-					height: 26rpx;
-					margin-right: 5rpx;
-				}
-			}
-			
-		}
-		.active_box_right{
-			width: 240rpx;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-			.phone{
-				width: 45rpx;
-				height: 67rpx;
-				margin-top: 13rpx;
-			}
-			.title_text{
-				width: 100%;
-				height: 62rpx;
-				font-size: 26rpx;
-				font-weight: bold;
-				text-align: center;
-			}
-		}
-	}
+

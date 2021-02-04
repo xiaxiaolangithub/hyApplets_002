@@ -1,4 +1,3 @@
-
 /**
  *获取当前时间
  *format=1精确到天
@@ -29,57 +28,65 @@ function getCurrentDate(format) {
 		time = year + "-" + month + "-" + date + " " + hour + ":" + minu + ":" + sec;
 	}
 	// 精确到年
-	else if(format == 0) {
+	else if (format == 0) {
 		time = year;
 	}
 	return time;
 }
 
+//时间戳转日期
+function getLocalTime(nS) {
+	return new Date(parseInt(nS)).toLocaleString().replace(/:\d{1,2}$/, ' ');
+}
 
-
+//时间戳返回周几
+function getWeek(time) {
+	let date = new Date(time);
+	return "周" + "日一二三四五六".charAt(date.getDay())
+}
 
 // 无梁换柱
 function checkValue(obj, key) {
-    if(obj[key] && obj[key] !== '') {
-        return obj[key]
-    } 
-    return '0'
+	if (obj[key] && obj[key] !== '') {
+		return obj[key]
+	}
+	return '0'
 }
 
 // 图片地址 way 图片路径
 function realmImg(way) {
-	let api = 'https://img-dev.hangzhouhuiyao.cn';
+	let api = 'https://img.hangzhouhuiyao.cn';
 	let url = `${api}/images/hycar/${way}`
 	return url
 }
 
-
 // 图片地址 way 图片路径
 function realmImgTwo(way) {
-	let api = 'https://img-dev.hangzhouhuiyao.cn';
+	let api = 'https://img.hangzhouhuiyao.cn';
 	let url = `${api}/images/hyApplets_002/${way}`
 	return url
 }
 
 
 // 数组去重
-function distinct(arr,key){
-    var newobj = {},newArr = [];
-    for(var i=0;i<arr.length;i++){
-        var item = arr[i];
-    	if(!newobj[item[key]]){
-            newobj[item[key]] = newArr.push(item);
-    	}
-    }
-    return newArr;
+function distinct(arr, key) {
+	var newobj = {},
+		newArr = [];
+	for (var i = 0; i < arr.length; i++) {
+		var item = arr[i];
+		if (!newobj[item[key]]) {
+			newobj[item[key]] = newArr.push(item);
+		}
+	}
+	return newArr;
 }
 
 
 /**
-* 数字转整数 如 100000 转为10万
-* @param {需要转化的数} num
-* @param {需要保留的小数位数} point
-*/
+ * 数字转整数 如 100000 转为10万
+ * @param {需要转化的数} num
+ * @param {需要保留的小数位数} point
+ */
 function tranNumber(num, point) {
 	let numStr = num.toString()
 	// 十万以内直接返回
@@ -105,40 +112,39 @@ function getArrDifference(arr1, arr2) {
 
 
 // 字符串固定位置增加字符串
-function insertStr(soure, start, newStr){   
+function insertStr(soure, start, newStr) {
 
-   return soure.slice(0, start) + newStr + soure.slice(start);
+	return soure.slice(0, start) + newStr + soure.slice(start);
 }
 
 
 // 防止处理多次点击
 function noMultipleClicks(methods, info) {
 	// methods是需要点击后需要执行的函数， info是点击需要传的参数
-    let that = this;
-    if (that.noClick) {
+	let that = this;
+	if (that.noClick) {
 		// 第一次点击
-        that.noClick= false;
-		if(info && info !== '') {
+		that.noClick = false;
+		if (info && info !== '') {
 			// info是执行函数需要传的参数
 			methods(info);
 		} else {
 			methods();
 		}
-        setTimeout(()=> {
-            that.noClick= true;
-        }, 2000)
-    } else {
+		setTimeout(() => {
+			that.noClick = true;
+		}, 2000)
+	} else {
 		// 这里是重复点击的判断
 	}
 }
 
 // 对象属性值转化成一串字符串
-function getObjectValues(object){
+function getObjectValues(object) {
 	var str = '';
 	var values = [];
 	for (var property in object)
-		values.push(object[property]
-	);
+		values.push(object[property]);
 	str = values.join(' ')
 	return str;
 }
@@ -147,11 +153,13 @@ export {
 	getCurrentDate,
 	checkValue,
 	realmImg,
-	realmImgTwo,
 	distinct,
 	tranNumber,
 	getArrDifference,
 	insertStr,
 	noMultipleClicks,
-	getObjectValues
+	getObjectValues,
+	getLocalTime,
+	getWeek,
+	realmImgTwo
 }

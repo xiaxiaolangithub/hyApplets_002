@@ -1,5 +1,14 @@
 <template>
 	<view class="apponitRecordsPage">
+		<view class="header">
+			<view class="item" v-for="(item,index) in navList" :key="index" @click="bindNav(index)">
+				<view class="text" :class="[navIndex==index?'active':'']">{{item}}</view>
+				<view class="line">
+					<image :src="realmImg('cardBag/line.png')" v-if="navIndex==index"></image>
+					<image v-else></image>
+				</view>
+			</view>
+		</view>
 		<!-- 订单列表 -->
 		<view class="order_section" v-if="isOrder">
 			<view class="page_inner">
@@ -65,10 +74,11 @@
 				</view>
 			</view>
 		</view>
-		
+
 		<!-- 数据为空 -->
-		<empty-part :isShow="!isOrder" :url="tipsObj.url" :tips="tipsObj.tips" :leftText="tipsObj.leftText" :middleText="tipsObj.middleText" :rightText="tipsObj.rightText"></empty-part>
-		
+		<empty-part :isShow="!isOrder" :url="tipsObj.url" :tips="tipsObj.tips" :leftText="tipsObj.leftText" :middleText="tipsObj.middleText"
+		 :rightText="tipsObj.rightText"></empty-part>
+
 	</view>
 </template>
 
@@ -82,6 +92,9 @@
 			return {
 				// 是否显示预约列表
 				isOrder: false,
+				// 订单状态
+				navList: ['全部', '待消费', '已完成', '已取消','已超时'],
+				navIndex: 0,
 				// 待预约数据
 				orderData: [],
 				current: 1,
@@ -91,11 +104,12 @@
 					leftText: '',
 					middleText: '',
 					rightText: '',
-				}
+				},
+				status: null,
 			};
 		},
 		onShow() {
-			// this.getReserveList();
+			this.getReserveList();
 		},
 		methods: {
 			// 查看更多子商品
@@ -156,6 +170,7 @@
 					url: this.$apis.appointmentList,
 					data: {
 						current: this.current, //	页码
+						status: this.status, //	订单状态 全部 null, WAIT_CONSUME 待消费，COMPLETED 已完成，CANCELED 已取消，TIMEOUT 已超时
 						size: 10000, //	每页条数	-	非必传，不传默认10条
 					},
 					success: (res) => {
@@ -167,14 +182,37 @@
 					},
 				});
 			},
+			// 点击订单状态
+			bindNav(index) {
+				let status;
+				if (index === 0) {
+					status = null
+				} else if (index === 1) {
+					status = 'WAIT_CONSUME'
+				} else if (index === 2) {
+					status = 'COMPLETED'
+				} else if (index === 3) {
+					status = 'CANCELED'
+				} else {
+					status = 'TIMEOUT'
+				}
+				this.status = status;
+				this.navIndex = index;
+				// 准备去请求订单
+				this.getReserveList();
+			},
 		},
 	};
 </script>
 
-<style>
+<style lang="scss">
 	page {
 		background: #f7f7f7;
 		height: 100%;
+	}
+
+	.apponitRecordsPage {
+		top: 95rpx;
 	}
 
 	.orderPage .order_section {
@@ -183,5 +221,45 @@
 
 	.orderPage .order_section .order_box .chid_goods .child {
 		margin-bottom: 0;
+	}
+
+	.header {
+		top: 0rpx;
+		height: 90rpx;
+		padding-top: 20rpx;
+		background: #ffffff;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 24rpx;
+		position: fixed;
+		z-index: 2;
+		padding-left: 40rpx;
+		padding-bottom: 15rpx;
+		box-sizing: border-box;
+
+		.item {
+			padding-right: 60rpx;
+		}
+
+		.text {
+			font-size: 28rpx;
+		}
+
+		.active {
+			color: $uni-color-main;
+		}
+
+		.line {
+			display: flex;
+			justify-content: center;
+			margin: 26rpx 0 15rpx 0;
+
+			image {
+				width: 34rpx;
+				height: 10rpx;
+			}
+		}
 	}
 </style>

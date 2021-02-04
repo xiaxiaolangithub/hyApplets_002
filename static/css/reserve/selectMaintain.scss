@@ -23,11 +23,17 @@
 		.top{
 			display: flex;
 			align-items: center;
-			justify-content: center;
 			font-size: 28rpx;
 			color:$uni-text-color-grey;
-			padding:25rpx 0;
-			border-bottom: 1rpx solid #CCCCCC;
+			padding:35rpx;
+			view{
+				width: 8rpx;
+				height: 34rpx;
+				background: -webkit-linear-gradient(bottom, $uni-color-main, $uni-color-main);
+				background: linear-gradient(0deg, $uni-color-main, $uni-color-main);
+				border-radius: 5rpx;
+				margin-right: 18rpx;
+			}
 		}
 		
 		// 折叠选择
@@ -58,6 +64,12 @@
 				color:$uni-text-color-grey;
 				font-size: 30rpx;
 				margin-bottom: 9rpx;
+			}
+			.top_label_act{
+				top:30rpx;
+			}
+			.main_act{
+				margin-bottom: 0;
 			}
 			.vice{
 				color:#9BA0AB;
@@ -93,7 +105,7 @@
 				color:$uni-text-color-memo !important;
 			}
 		}
-	
+		
 		
 		// 占位栏
 		.place{
@@ -117,7 +129,7 @@
 	// 页面底部
 	.page_footer{
 		width:750rpx;
-		height:100rpx;
+		height:120rpx;
 		background:#FFFFFF;
 		border:1px solid #F5F5F5;
 		position: fixed;
@@ -137,15 +149,15 @@
 			width:180rpx;
 		}
 		.img{
-			width:30rpx;
-			height: 30rpx;
+			width:40rpx;
+			height: 40rpx;
 			margin-right: 12rpx;
 		}
 		.contact{
 			background:#fff;
 			height: 100%;
 			color:$uni-text-color-grey;
-			font-size:24rpx;
+			font-size:28rpx;
 			padding: 0 !important;
 			margin: 0 !important;
 			display: flex;
@@ -158,7 +170,7 @@
 			width:300rpx;
 			height:60rpx;
 			background:$uni-color-main;
-			border-radius:12rpx;
+			border-radius: 0px 0px 0px 30rpx;
 			text-align: center;
 			line-height: 60rpx;
 			color:#fff;
@@ -173,5 +185,90 @@
 		left: 0;
 		right: 0;
 		z-index: 100;
+	}
+	.day_list{
+		margin-bottom: 20rpx;
+		.day_list_act{
+			display: flex;
+			height: 95rpx;
+			white-space: nowrap;
+			.day_list_item{
+				display: inline-block;
+				width: 90rpx;
+				height: 80rpx;
+				text-align: center;
+				font-size: 24rpx;
+				color: #7083A7;
+				padding-top: 10rpx;
+				border-radius: 7px;
+				margin: 0 10rpx;
+				view:last-child{
+					font-size: 28rpx;
+				}
+			}
+			.day_list_item:first-child{
+				margin-left: 32rpx;
+			}
+			.day_list_item:last-child{
+				margin-right: 32rpx;
+			}
+			.day_list_active{
+				background-color: $uni-color-main!important;
+				color: #FFFFFF!important;
+			}
+		}
+	}
+	.time_list{
+		.time_list_act{
+			display: flex;
+			height: 95rpx;
+			white-space: nowrap;
+			.time_list_item{
+				display: inline-block;
+				width: 190rpx;
+				height: 80rpx;
+				text-align: center;
+				font-size: 24rpx;
+				color: #7083A7;
+				padding-top: 10rpx;
+				border-radius: 7px;
+				margin-right: 20rpx;
+				view:last-child{
+					font-size: 28rpx;
+				}
+			}
+			.time_list_item:first-child{
+				margin-left: 32rpx;
+			}
+			.time_list_item:last-child{
+				margin-right: 32rpx;
+			}
+			.time_list_active{
+				background-color: $uni-color-main!important;
+				color: #FFFFFF!important;
+			}
+		}
+	}
+	.day_list_act::-webkit-scrollbar {
+		display:none;
+		width:0;
+		height:0;
+		color:transparent;
+	}
+	.my_time{
+		color: $uni-color-main;
+		margin: 40rpx 35rpx 30rpx 35rpx;
+		border: 1rpx solid $uni-color-main;
+		padding: 15rpx 30rpx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 15rpx;
+		.my_time_act{
+			width: 3rpx;
+			height: 35rpx;
+			background-color: $uni-color-main;
+			margin: 0 45rpx;
+		}
 	}
 }

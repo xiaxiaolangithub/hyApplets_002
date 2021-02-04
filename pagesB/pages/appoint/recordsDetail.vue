@@ -82,6 +82,7 @@
 			<view class="right">
 				<!-- 预约订单详情有 取消预约和编辑 -->
 				<view class="cancel" v-if="getData.status == 'WAIT_CONSUME'" @tap="cancelOrder">取消预约</view>
+				<view class="cancel" v-if="getData.status == 'COMPLETED' || getData.status == 'CANCELED'" @tap="deleteOrder">删除</view>
 			</view>
 		</view>
 	</view>
@@ -142,7 +143,6 @@
 			let accountInfo = wx.getAccountInfoSync();
 			this.appId = accountInfo.miniProgram.appId;
 
-			// this.getReserveData();
 			this.getShopAddress(); // 获取当前预约信息
 		},
 		methods: {
@@ -263,7 +263,7 @@
 									uni.showToast({
 										title: '取消预约成功'
 									});
-									this.getReserveData();
+									this.getShopAddress();
 								})
 							})
 						}
@@ -277,12 +277,34 @@
 					icon: 'none'
 				})
 			},
-			// 删除已完成订单
-			delOrder() {
-				uni.showToast({
-					title: '删除订单，待开发...',
-					icon: 'none'
-				})
+			// 删除订单
+			deleteOrder(){
+				uni.showModal({
+					title: "",
+					content: "确认删除该预约吗？",
+					cancelText: "确认",
+					cancelColor: "#141E34",
+					confirmText: "返回",
+					confirmColor: "#3377FF",
+					success: (res) => {
+						if (!res.confirm) {
+							this.$http({
+								url: this.$apis.appointmentDelete + '?id=' + this.type,
+								method: 'GET',
+								success: ((res) => {
+									uni.showToast({
+										title: '删除预约成功'
+									});
+									setTimeout(()=>{
+										uni.redirectTo({
+											url: '/pagesB/pages/appoint/records'
+										});
+									},1000)
+								})
+							})
+						}
+					},
+				});
 			},
 			// 支付待付款订单
 			payOrder() {

@@ -2,43 +2,42 @@
 	<view class="userPage">
 		<view class="login_section">
 			<!-- 自定义导航栏 -->
-			<uni-nav-bar :fixed="true" background-color="transparent" :status-bar="true" color="#fff" class="interBar" title="个人中心"></uni-nav-bar>
-			
+			<uni-nav-bar :fixed="true" background-color="transparent" :status-bar="true" color="#333333" class="interBar" title="个人中心"></uni-nav-bar>
+
 			<view class="user_info_box">
 				<image class="portrait" @tap="settingUser" :src="userinfo.avatarUrl || realmImg('user/header.png')"></image>
-				<view class="go_login" v-if="!hasLogin"  @tap="goLogin">
+				<view class="go_login" v-if="!hasLogin" @tap="goLogin">
 					立即登录
 					<text class="iconfont icon-xiangyoujiantou"></text>
 				</view>
-				<view class="username"  v-else>{{userinfo.nickName}}</view>
+				<view class="username" v-else>{{userinfo.nickName}}</view>
+			</view>
+			<view class="coupon_integral">
+				<view class="left" @tap="goCoupon">
+					<image class="image2" mode="widthFix" :src="realmImgTwo('user/coupon.png')"></image>
+					<view>优惠券</view>
+				</view>
+				<view class="right" @tap="goIntegral">
+					<image class="image2" mode="widthFix" :src="realmImgTwo('user/integral.png')"></image>
+					<view>积分</view>
+				</view>
 			</view>
 		</view>
 
-		<view class="coupon_integral">
-			<view class="left" @tap="goCoupon">
-				<image class="image2" mode="widthFix" :src="realmImg('user/coupon.png')"></image>
-				<view>优惠券</view>
-			</view>
-			<view class="active_center"></view>
-			<view class="right" @tap="goIntegral">
-				<image class="image2" mode="widthFix" :src="realmImg('user/integral.png')"></image>
-				<view>积分</view>
-			</view>
-		</view>
-		
 		<!-- 我的爱车 -->
 		<view class="car_section">
 			<view class="title">我的爱车</view>
 			<view class="car_list">
-				<view class="list" v-for="(car, index) in carList" :key="index" :style="{backgroundImage:'url(' + car.url + ')',backgroundRepeat:'no-repeat',backgroundSize: 'cover'}"
-					@tap="tapCar(index)">
-					{{car.title}}
+				<view class="list" v-for="(car, index) in carList" :key="index" @tap=" tapCar(index)">
+					<image class="image3" mode="widthFix" :src="car.url"></image>
+					<view>{{car.title}}</view>
 				</view>
 			</view>
 		</view>
+
 		<!-- 我的订单 -->
-		<view class="car_section">
-			<view class="car_top"  @tap="tapAllOrder">
+		<view class="car_section" style="margin-top: 30rpx;">
+			<view class="car_top" @tap="tapAllOrder">
 				<view class="title">我的订单</view>
 				<text class="all_btn">
 					全部订单
@@ -53,7 +52,7 @@
 				</view>
 			</view>
 		</view>
-		
+
 		<!-- 账号信息 -->
 		<view class="feedback">
 			<view class="feedback_inner" @tap="settingUser">
@@ -68,8 +67,13 @@
 </template>
 <script>
 	import uniNavBar from "@/components/uni-nav-bar/uni-nav-bar.vue"
-	import { goTaBar, goPages } from '@/utils/request.js'
-	import { checkValue } from '@/static/js/tool.js'
+	import {
+		goTaBar,
+		goPages
+	} from '@/utils/request.js'
+	import {
+		checkValue
+	} from '@/static/js/tool.js'
 	export default {
 		components: {
 			uniNavBar,
@@ -78,31 +82,35 @@
 			return {
 				carList: [ // 爱车档案、预约记录
 					{
-						url: this.realmImg('user/car_01.png'),
+						url: this.realmImgTwo('user/car_01.png'),
 						title: '爱车档案'
 					},
 					{
-						url: this.realmImg('user/yuyue-bg.png'),
+						url: this.realmImgTwo('user/yuyue-bg.png'),
 						title: '预约记录'
+					},
+					{
+						url: this.realmImgTwo('user/huodong-bg.png'),
+						title: '我的活动'
 					},
 				],
 				orderList: [ // 订单数据
 					{
-						url: this.realmImg('user/order-pay.png'),
+						url: this.realmImgTwo('user/order-pay.png'),
 						title: '待付款'
 					},
 					{
-						url: this.realmImg('user/order-complete.png'),
+						url: this.realmImgTwo('user/order-complete.png'),
 						title: '已支付'
 					},
 					{
-						url: this.realmImg('user/hasPayOrder.png'),
+						url: this.realmImgTwo('user/hasPayOrder.png'),
 						title: '已完成'
 					},
-					/* {
-						url: this.realmImg('user/order-tuikuan.png'),
-						title: '退款'
-					}, */
+					//  {
+					// 	url: this.realmImgTwo('user/order-tuikuan.png'),
+					// 	title: '退款'
+					// }, 
 				],
 				waitPayOrderCount: 0,
 			}
@@ -213,7 +221,7 @@
 				})
 			},
 			// 去优惠券页面
-			goCoupon(){
+			goCoupon() {
 				if (!this.hasLogin) {
 					this.goLogin();
 					return false;
@@ -221,7 +229,7 @@
 				goPages('cardBag')
 			},
 			// 去积分页面
-			goIntegral(){
+			goIntegral() {
 				if (!this.hasLogin) {
 					this.goLogin();
 					return false;

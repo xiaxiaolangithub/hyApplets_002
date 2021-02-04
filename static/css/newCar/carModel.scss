@@ -46,7 +46,7 @@
 		}
 		.discount{
 			font-size: 30rpx;
-			color:$uni-text-color-price;
+			color:$uni-color-main;
 		}
 		
 	}
@@ -64,8 +64,8 @@
 			color:$uni-color-main;
 			width: 260rpx;
 			height: 70rpx;
-			border: 1px solid #3377FF;
-			border-radius: 12rpx;
+			border: 1px solid $uni-color-main;
+			border-radius: 0px 0px 0px 30rpx;
 			margin-top:15rpx;
 		}
 		.ask_hover{

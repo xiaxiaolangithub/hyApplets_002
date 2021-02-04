@@ -54,7 +54,7 @@ const interfaces = {
 	saveAppoint: 'appointment/save',							// 专属服务提交	
 	
 	//保养项目
-	maintainPackageList: 'maintainPackage/list',							//条件分页查询保养套餐
+	maintainPackageGet: 'maintainPackage/get',							//条件分页查询保养套餐
 	appointmentRemainPullDownList: 'appointmentRemain/pullDownList',		//获取某日期的所有预约时间段及其余量
 	
 	//预约相关
@@ -63,6 +63,7 @@ const interfaces = {
 	appointmentCancel: 'appointment/cancel',					//　取消预约
 	shopGetShopAddressVO: 'shop/getShopAddressVO',				//　获店铺位置
 	appointmentDetail: 'appointment/detail',					//　获取预约详情
+	appointmentDelete: 'appointment/delete', 					//  删除预约订单
 	
 	// 专属服务提交
 	// saveAppoint: 'appointment/save',							// 专属服务提交	
