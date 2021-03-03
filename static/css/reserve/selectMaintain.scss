@@ -104,6 +104,11 @@
 			.tui-collapse-icon{
 				color:$uni-text-color-memo !important;
 			}
+			.item_box:last-child{
+				.check_group{
+					padding:25rpx 30rpx 150rpx 65rpx;
+				}
+			}
 		}
 		
 		

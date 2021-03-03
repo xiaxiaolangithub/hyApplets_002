@@ -52,7 +52,7 @@
 			<!-- 折叠选择 -->
 			<view class="collapse_box">
 				<block v-for="(item,index) in maintainData" :key="index">
-					<tui-collapse :index="index" :current="item.current" :disabled="item.disabled">
+					<tui-collapse class="item_box" :index="index" :current="item.current" :disabled="item.disabled">
 						<template v-slot:title>
 							<view class="collapse_top">
 								<label @tap="checkboxChange(item)" class="top_label" :class="{top_label_act : !item.vice}">
@@ -70,8 +70,8 @@
 							<view class="tui-content">
 								<checkbox-group class="check_group">
 									<view v-for="(detail, i) in item.detail" :key="i" class="detail_list">
-										<view class="detail_label">
-											<checkbox style="transform:scale(0.8)" @click="simpleCheck(item,detail)" :value="i" :checked="detail.isChecked" />
+										<view class="detail_label" @click="simpleCheck(item,detail)">
+											<checkbox style="transform:scale(0.8)" :value="i" :checked="detail.isChecked" />
 											<view class="detail_content">{{detail.content}}</view>
 										</view>
 									</view>
