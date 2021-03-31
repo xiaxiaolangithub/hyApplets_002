@@ -75,9 +75,15 @@ function goPages(info) {
 			});
 			break;
 		case 'cardBag':
+			// 优惠券
+			uni.navigateTo({
+				url: '/pagesA/pages/cardBag/cardBag?type=cardBag'
+			})
+			break;
+		case 'changeCard':
 			// 卡包
 			uni.navigateTo({
-				url:'/pagesA/pages/cardBag/cardBag'
+				url: '/pagesA/pages/cardBag/changeCard?type=changeCard'
 			})
 			break;
 		case 'upDateName':

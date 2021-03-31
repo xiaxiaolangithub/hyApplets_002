@@ -7,7 +7,7 @@ export default function (param)  {
 		// 线上域名：https://api.hangzhouhuiyao.cn/
 		// 开发域名：https://api-dev.hangzhouhuiyao.cn/
 		// 本地：http://192.168.3.12:8080/
-		root: 'https://api.hangzhouhuiyao.cn/',
+		root: 'https://api-dev.hangzhouhuiyao.cn/',
 		method: 'POST',
 		header: {"content-type":"application/json"},
 		data: obj || {},

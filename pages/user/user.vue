@@ -2,10 +2,12 @@
 	<view class="userPage">
 		<view class="login_section">
 			<!-- 自定义导航栏 -->
-			<uni-nav-bar :fixed="true" background-color="transparent" :status-bar="true" color="#333333" class="interBar" title="个人中心"></uni-nav-bar>
+			<uni-nav-bar :fixed="true" background-color="transparent" :status-bar="true" color="#333333"
+				class="interBar" title="个人中心"></uni-nav-bar>
 
 			<view class="user_info_box">
-				<image class="portrait" @tap="settingUser" :src="userinfo.avatarUrl || realmImg('user/header.png')"></image>
+				<image class="portrait" @tap="settingUser" :src="userinfo.avatarUrl || realmImg('user/header.png')">
+				</image>
 				<view class="go_login" v-if="!hasLogin" @tap="goLogin">
 					立即登录
 					<text class="iconfont icon-xiangyoujiantou"></text>
@@ -16,6 +18,10 @@
 				<view class="left" @tap="goCoupon">
 					<image class="image2" mode="widthFix" :src="realmImgTwo('user/coupon.png')"></image>
 					<view>优惠券</view>
+				</view>
+				<view class="center" @tap="goChangeCard">
+					<image class="image2" mode="widthFix" :src="realmImgTwo('user/cardbag.png')"></image>
+					<view>卡包</view>
 				</view>
 				<view class="right" @tap="goIntegral">
 					<image class="image2" mode="widthFix" :src="realmImgTwo('user/integral.png')"></image>
@@ -89,10 +95,10 @@
 						url: this.realmImgTwo('user/yuyue-bg.png'),
 						title: '预约记录'
 					},
-					{
-						url: this.realmImgTwo('user/huodong-bg.png'),
-						title: '我的活动'
-					},
+					// {
+					// 	url: this.realmImgTwo('user/huodong-bg.png'),
+					// 	title: '我的活动'
+					// },
 				],
 				orderList: [ // 订单数据
 					{
@@ -235,6 +241,14 @@
 					return false;
 				}
 				goPages('integral');
+			},
+			//去卡包
+			goChangeCard() {
+				if (!this.hasLogin) {
+					this.goLogin();
+					return false;
+				}
+				goPages('changeCard');
 			}
 		}
 	}

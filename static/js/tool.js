@@ -65,8 +65,7 @@ function realmImgTwo(way) {
 	let api = 'https://img.hangzhouhuiyao.cn';
 	let url = `${api}/images/hyApplets_002/${way}`
 	return url
-}
-
+} 
 
 // 数组去重
 function distinct(arr, key) {

@@ -231,6 +231,17 @@
 				}
 			},
 			{
+				"path": "pages/cardBag/changeCard", // 兑换卡包
+				"style": {
+					"navigationBarTitleText": "卡包",
+					"backgroundTextStyle": "dark",
+					"navigationBarBackgroundColor": "#fff",
+					"backgroundColorTop": "#21242d",
+					"navigationBarTextStyle": "black",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
 				"path": "pages/shop/insurance/index", //保险
 				"style": {
 					"navigationBarTitleText": "保值服务",

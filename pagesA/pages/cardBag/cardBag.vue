@@ -13,7 +13,7 @@
 			
 			<!-- 卡包列表 -->
 			<view class="card_container">
-				<card-part v-if="couponData.length>0" :couponData="couponData" :road="road"
+				<card-part v-if="couponData.length>0" :isSource="isSource" :couponData="couponData" :road="road"
 				:tipImg="tipImg" :navIndex="navIndex" :isDetail="false"></card-part>
 	
 				
@@ -70,6 +70,7 @@
 					rightText: '看看吧~',
 				},
 				isPull: false,				// 是否是页面上拉加载
+				isSource: '', 		//给组件判断是否是兑换卡包进去的
 			}
 		},
 		watch:{
@@ -108,6 +109,7 @@
 			} else {
 				this.getVoucherList();
 			}
+			this.isSource = e.type;
 		},
 		onShow() {
 			// 监听从个人中心过来的优惠券到账事件
@@ -150,6 +152,7 @@
 					data: {
 						status: this.statusCoupon,
 						current: this.currentPage,	// 页码
+						isGiftCard: false// 是否为兑换卡列表 - 必传
 					},
 					success: ((res) => {
 						let result = res.data;
