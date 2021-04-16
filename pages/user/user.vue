@@ -59,6 +59,14 @@
 			</view>
 		</view>
 
+		<!-- 我要买单 -->
+		<view class="feedback" style="margin-bottom:30rpx" v-if="isCheck">
+			<view class="feedback_inner" @tap="checkUser">
+				<view class="feedback_text">我要买单</view>
+				<text class="iconfont icon-xiangyoujiantou"></text>
+			</view>
+		</view>
+
 		<!-- 账号信息 -->
 		<view class="feedback">
 			<view class="feedback_inner" @tap="settingUser">
@@ -119,6 +127,7 @@
 					// }, 
 				],
 				waitPayOrderCount: 0,
+				isCheck: true,
 			}
 		},
 		computed: {
@@ -173,6 +182,7 @@
 					method: 'GET',
 					success: ((res) => {
 						this.waitPayOrderCount = Number(res.data.waitPayOrderCount);
+						this.isCheck = res.data.openPayTheBill;
 					}),
 				})
 			},
@@ -249,6 +259,14 @@
 					return false;
 				}
 				goPages('changeCard');
+			},
+			// 去我要买单
+			checkUser(){
+				if (!this.hasLogin) {
+					this.goLogin();
+					return false;
+				}
+				goPages('check');
 			}
 		}
 	}

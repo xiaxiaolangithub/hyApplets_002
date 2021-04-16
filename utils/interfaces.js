@@ -78,6 +78,7 @@ const interfaces = {
 	customerPerInfo: 'customer/perInfo',						// 获取用户信息
 	customerUpdatePerInfo: 'customer/updatePerInfo', 			// 修改个人信息
 	getMineInfo: 'customer/perCenter',							// 数值：积分、优惠券、待预约商品、收藏
+	getAuthorizerConfig: 'authorizerConfig/get',				// 获取当前店铺授权方配置
 	
 	
 	//获取订阅消息模板
@@ -114,6 +115,7 @@ const interfaces = {
 	getReqSn: 'reqSn/getReqSn',									// 获取请求编号
 	createOrder: 'order/createOrder',							// 商品详情下单
 	waitOrderPay: 'order/pay',									// 待付款订单进行下单
+	orderPayTheBill: 'order/payTheBill'							// 买单
 	
 }
 module.exports = interfaces;

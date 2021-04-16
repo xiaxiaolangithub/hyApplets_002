@@ -1,4 +1,3 @@
-
 // 当前文件为 公共事件请求及页面跳转
 import https from "@/utils/https.js";
 import interfaces from "@/utils/interfaces.js";
@@ -7,29 +6,29 @@ import store from '@/store/index.js'
 // 跳转tarbar, num表示页面底部导航索引
 function goTaBar(num) {
 	// store.commit('setBottomNavigationIndex', num)
-	switch(num) {
+	switch (num) {
 		case 0:
 			// 资讯页面
 			uni.switchTab({
-				url:'/pages/information/information'
+				url: '/pages/information/information'
 			})
 			break;
 		case 1:
 			// 商城页面 
 			uni.switchTab({
-				url:'/pages/home/home'
+				url: '/pages/home/home'
 			})
 			break;
-		case 2:	
+		case 2:
 			// 专属服务
 			uni.switchTab({
-				url:'/pages/exclusive/exclusive'
+				url: '/pages/exclusive/exclusive'
 			})
 			break;
 		case 4:
 			// 我的
 			uni.switchTab({
-				url:'/pages/user/user'
+				url: '/pages/user/user'
 			})
 			break;
 	}
@@ -37,7 +36,7 @@ function goTaBar(num) {
 
 // 跳转页面
 function goPages(info) {
-	switch(info) {
+	switch (info) {
 		case 'login':
 			// 登录页面
 			uni.navigateTo({
@@ -89,13 +88,13 @@ function goPages(info) {
 		case 'upDateName':
 			// 修改姓名
 			uni.navigateTo({
-				url:'/pagesB/pages/setting/upDateName'
+				url: '/pagesB/pages/setting/upDateName'
 			});
 			break;
 		case 'records':
 			// 我的预约记录
 			uni.navigateTo({
-				url:'/pagesB/pages/appoint/records'
+				url: '/pagesB/pages/appoint/records'
 			});
 			break;
 		case 'orderList':
@@ -103,15 +102,21 @@ function goPages(info) {
 			uni.navigateTo({
 				url: '/pagesB/pages/order/orderList'
 			})
-			
+			break;
+		case 'check':
+			// 我要买单
+			uni.navigateTo({
+				url: '/pagesB/pages/check/check'
+			});
+
 	}
-	
-	
+
+
 }
 
 
 // 领取优惠券
-function receiveCoupon (id) {
+function receiveCoupon(id) {
 	https({
 		url: interfaces.grabVoucher,
 		method: 'GET',
@@ -119,14 +124,14 @@ function receiveCoupon (id) {
 			id: Number(id),
 		},
 		success: ((res) => {
-			if(res.code == 1) {
+			if (res.code == 1) {
 				uni.showToast({
 					title: '领取成功 ！',
 				});
 				uni.$emit("handleFun", {
 					navIndex: 0
 				});
-			} else{
+			} else {
 				uni.showToast({
 					title: res.local,
 					icon: 'none'
@@ -140,5 +145,5 @@ export {
 	goTaBar,
 	goPages,
 	receiveCoupon,
-	
+
 }
